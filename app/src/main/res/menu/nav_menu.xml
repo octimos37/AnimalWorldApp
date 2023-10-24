@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_kp"
+        android:title="@string/nav_kp"
+        android:icon="@drawable/ic_kp"
+        />
+
+    <item
+        android:id="@+id/nav_dvm"
+        android:title="@string/nav_dvm"
+        android:icon="@drawable/ic_dvm"
+        />
+
+    <item
+        android:id="@+id/nav_gmnb"
+        android:title="@string/nav_gmnb"
+        android:icon="@drawable/ic_gmnb"/>
+
+    <item
+        android:id="@+id/nav_dsyt"
+        android:title="@string/nav_dsyt"
+        android:icon="@drawable/ic_dsyt"/>
+
+    <item
+        android:id="@+id/nav_dv"
+        android:title="@string/nav_dv"
+        android:icon="@drawable/ic_dv"/>
+
+    <item
+        android:id="@+id/nav_eykh"
+        android:title="@string/nav_eykh"
+        android:icon="@drawable/ic_eykh"/>
+
+    <item
+        android:id="@+id/nav_cstc"
+        android:title="@string/nav_cstc"
+        android:icon="@drawable/ic_cstc"/>
+
+    <item
+        android:id="@+id/nav_hd"
+        android:title="@string/nav_hd"
+        android:icon="@drawable/ic_hd"/>
+
+    <item
+        android:id="@+id/nav_tg"
+        android:title="@string/nav_tg"
+        android:icon="@drawable/ic_tg"/>
+</menu>

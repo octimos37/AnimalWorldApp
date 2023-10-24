@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Animals World</string>
+    <string name="header">Động vật</string>
+    <string name="animalText">Animal</string>
+    <string name="about_us">About Us</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="nav_kp">Khám phá thế giới động vật</string>
+    <string name="nav_dvm">Động vật mới</string>
+    <string name="nav_gmnb">Gương mặt nổi bật</string>
+    <string name="nav_dsyt">Danh sách yêu thích</string>
+    <string name="nav_dv">Đố vui</string>
+    <string name="nav_eykh">Em yêu khoa học</string>
+    <string name="nav_cstc">Chăm sóc thú cưng</string>
+    <string name="nav_hd">Hướng dẫn</string>
+    <string name="nav_tg">Tác giả</string>
+    <string name="started">Bắt đầu thôi!</string>
+    <string name="welcome">Chào mừng\nđến với Animal World</string>
+</resources>

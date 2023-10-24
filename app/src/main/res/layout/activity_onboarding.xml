@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnboardingActivity"
+    android:background="@color/body">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/chuot_tui2" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="350dp"
+        android:src="@drawable/bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_skip"
+        android:text="@string/started"
+        android:textSize="15sp"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:padding="8dp"
+        android:background="@drawable/round_btn"
+        android:width="298dp"
+        android:height="42dp"
+        android:enabled="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="270dp"
+        android:padding="10dp"
+        android:lineSpacingExtra="7dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tại đây bạn có thể tìm hiểu về\nđộng vật ở mọi nơi trên thế giới."
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="200dp"
+        android:lineSpacingExtra="5dp"
+        />
+
+
+</RelativeLayout>
