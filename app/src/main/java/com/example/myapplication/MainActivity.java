@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private int mCurrentFragment = CLASS_FRAGMENT;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         replaceFragment(new ClassFragment());
         navigationView.getMenu().findItem(R.id.nav_kp).setChecked(true);
-        //navigationView.setBackgroundColor(getResources().getColor(R.color.purple_700));
+
     }
 
     // override the onOptionsItemSelected()
@@ -96,50 +98,60 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
+
         if(id == R.id.nav_kp){
             if(mCurrentFragment != CLASS_FRAGMENT){
                 replaceFragment(new ClassFragment());
                 mCurrentFragment = CLASS_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.main_layout_custom);
             }
         } else if (id == R.id.nav_dvm) {
             if(mCurrentFragment != NEW_UPDATE_FRAGMENT){
                 replaceFragment(new NewUpdateFragment());
                 mCurrentFragment = NEW_UPDATE_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.new_update_layout_custom);
             }
         } else if (id == R.id.nav_gmnb) {
             if(mCurrentFragment != HOT_SEARCH_FRAGMENT){
                 replaceFragment(new HotSearchFragment());
                 mCurrentFragment = HOT_SEARCH_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.hot_search_layout_custom);
             }
         } else if (id == R.id.nav_dsyt) {
             if(mCurrentFragment != FAVORITE_FRAGMENT){
                 replaceFragment(new FavoriteFragment());
                 mCurrentFragment = FAVORITE_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.favorite_layout_custom);
             }
         } else if (id == R.id.nav_eykh) {
             if(mCurrentFragment != SCIENT_FRAGMENT){
                 replaceFragment(new ScientFragment());
                 mCurrentFragment = SCIENT_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.scient_layout_custom);
             }
         } else if (id == R.id.nav_dv) {
             if(mCurrentFragment != QUIZ_FRAGMENT){
                 replaceFragment(new QuizFragment());
                 mCurrentFragment = QUIZ_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.quiz_layout_custom);
             }
         } else if (id == R.id.nav_cstc) {
             if(mCurrentFragment != PET_FRAGMENT){
                 replaceFragment(new PetFragment());
                 mCurrentFragment = PET_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.pet_layout_custom);
             }
         } else if (id == R.id.nav_hd) {
             if(mCurrentFragment != HELP_FRAGMENT){
                 replaceFragment(new HelpFragment());
                 mCurrentFragment = HELP_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.help_layout_custom);
             }
         } else if (id == R.id.nav_tg) {
             if(mCurrentFragment != DIRECTOR_FRAGMENT){
                 replaceFragment(new DirectorFragment());
                 mCurrentFragment = DIRECTOR_FRAGMENT;
+                getSupportActionBar().setCustomView(R.layout.director_layout_custom);
             }
         }
 
