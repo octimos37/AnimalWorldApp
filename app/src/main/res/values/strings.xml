@@ -18,4 +18,6 @@
     <string name="nav_tg">Tác giả</string>
     <string name="started">Bắt đầu thôi!</string>
     <string name="welcome">Chào mừng\nđến với Animal World</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Director</string>
 </resources>
