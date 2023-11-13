@@ -13,12 +13,14 @@
         android:layout_height="53dp">
 
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
 
 
         <ImageView
@@ -37,6 +39,7 @@
             android:paddingBottom="10dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center_vertical"
+            android:textSize="17dp"
             android:text="Loài canid này nặng khoảng 10 kg và cao 36 cm. Nó có đôi tai rất ngắn với cái đầu thon dài. Bộ lông có màu xám đậm, bụng màu đỏ nhạt và đuôi hơi sẫm hơn. Đây là loài chó hoang dã ít được biết đến nhất ở Brazil và hiếm khi được nhìn thấy trong môi trường tự nhiên."
             />
 
@@ -45,8 +48,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="38dp"
-        android:layout_height="31dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:src="@drawable/hinh_traitim"
         android:layout_marginTop="420dp"
         android:layout_marginLeft="10dp"
@@ -54,26 +57,26 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/hinh_dau_cham_hoi"
         android:layout_marginTop="420dp"
-        android:layout_marginLeft="350dp"
+        android:layout_marginLeft="345dp"
         />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:src="@drawable/hinh_chu_i"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="350dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="345dp"
         />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@drawable/hinh_video_cam"
         android:layout_marginTop="420dp"
         android:layout_marginLeft="190dp"
@@ -87,6 +90,41 @@
         android:layout_marginTop="485dp"
         android:layout_marginLeft="20dp"
         />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/hinh_back" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="120dp"
+        android:src="@drawable/icon_voice" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="19dp"
+        android:textStyle="bold"
+        android:text="Chó tai ngắn"
+        android:textSize="17dp"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="350dp"
+        android:src="@drawable/icon_change_langue" />
 
 
 </FrameLayout>
