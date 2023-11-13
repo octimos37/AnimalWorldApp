@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Quizz.quizz_finish">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="57dp">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="15dp"
+        tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="110dp"
+        android:text="Congratulations" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="80dp"
+        android:text="You have finished the quiz!" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="110dp"
+        android:text="Awswered correctly" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="140dp"
+        android:text="9/10" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="333dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/refresh_quiz" />
+
+
+</FrameLayout>
