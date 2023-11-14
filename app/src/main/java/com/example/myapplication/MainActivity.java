@@ -6,24 +6,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
-import com.example.myapplication.fragment.ClassFragment;
-import com.example.myapplication.fragment.DirectorFragment;
-import com.example.myapplication.fragment.FavoriteFragment;
-import com.example.myapplication.fragment.HelpFragment;
-import com.example.myapplication.fragment.HotSearchFragment;
-import com.example.myapplication.fragment.NewUpdateFragment;
-import com.example.myapplication.fragment.PetFragment;
-import com.example.myapplication.fragment.QuizFragment;
-import com.example.myapplication.fragment.ScientFragment;
+import com.example.myapplication.Species.Canidae.CanidaeActivity;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
@@ -32,20 +23,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
 
+    private ImageView imageView;
+
     public static final String url = "https://www.google.com";
 
-    private static final int CLASS_FRAGMENT = 0;
-    private static final int NEW_UPDATE_FRAGMENT = 1;
-    private static final int HOT_SEARCH_FRAGMENT = 2;
-    private static final int FAVORITE_FRAGMENT = 3;
-    private static final int SCIENT_FRAGMENT = 4;
-    private static final int QUIZ_FRAGMENT = 5;
-    private static final int PET_FRAGMENT = 6;
-    private static final int HELP_FRAGMENT = 7;
-    private static final int DIRECTOR_FRAGMENT = 8;
+    private static final int CLASS_ACTIVITY = 0;
+    private static final int NEW_UPDATE_ACTIVITY = 1;
+    private static final int HOT_SEARCH_ACTIVITY = 2;
+    private static final int FAVORITE_ACTIVITY = 3;
+    private static final int SCIENT_ACTIVITY = 4;
+    private static final int QUIZ_ACTIVITY = 5;
+    private static final int PET_ACTIVITY = 6;
+    private static final int HELP_ACTIVITY = 7;
+    private static final int DIRECTOR_ACTIVITY = 8;
 
 
-    private int mCurrentFragment = CLASS_FRAGMENT;
+    private int mCurrentActivity = CLASS_ACTIVITY;
 
 
 
@@ -70,8 +63,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        replaceFragment(new ClassFragment());
+        //replaceFragment(new ClassFragment());
         navigationView.getMenu().findItem(R.id.nav_kp).setChecked(true);
+
+        imageView = findViewById(R.id.ivDongvatcovu);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MammalsActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -100,60 +102,60 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if(id == R.id.nav_kp){
-            if(mCurrentFragment != CLASS_FRAGMENT){
-                replaceFragment(new ClassFragment());
-                mCurrentFragment = CLASS_FRAGMENT;
+
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(i);
                 getSupportActionBar().setCustomView(R.layout.main_layout_custom);
-            }
+
         } else if (id == R.id.nav_dvm) {
-            if(mCurrentFragment != NEW_UPDATE_FRAGMENT){
-                replaceFragment(new NewUpdateFragment());
-                mCurrentFragment = NEW_UPDATE_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.new_update_layout_custom);
-            }
-        } else if (id == R.id.nav_gmnb) {
-            if(mCurrentFragment != HOT_SEARCH_FRAGMENT){
-                replaceFragment(new HotSearchFragment());
-                mCurrentFragment = HOT_SEARCH_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.hot_search_layout_custom);
-            }
-        } else if (id == R.id.nav_dsyt) {
-            if(mCurrentFragment != FAVORITE_FRAGMENT){
-                replaceFragment(new FavoriteFragment());
-                mCurrentFragment = FAVORITE_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.favorite_layout_custom);
-            }
-        } else if (id == R.id.nav_eykh) {
-            if(mCurrentFragment != SCIENT_FRAGMENT){
-                replaceFragment(new ScientFragment());
-                mCurrentFragment = SCIENT_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.scient_layout_custom);
-            }
-        } else if (id == R.id.nav_dv) {
-            if(mCurrentFragment != QUIZ_FRAGMENT){
-                replaceFragment(new QuizFragment());
-                mCurrentFragment = QUIZ_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.quiz_layout_custom);
-            }
-        } else if (id == R.id.nav_cstc) {
-            if(mCurrentFragment != PET_FRAGMENT){
-                replaceFragment(new PetFragment());
-                mCurrentFragment = PET_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.pet_layout_custom);
-            }
-        } else if (id == R.id.nav_hd) {
-            if(mCurrentFragment != HELP_FRAGMENT){
-                replaceFragment(new HelpFragment());
-                mCurrentFragment = HELP_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.help_layout_custom);
-            }
-        } else if (id == R.id.nav_tg) {
-            if(mCurrentFragment != DIRECTOR_FRAGMENT){
-                replaceFragment(new DirectorFragment());
-                mCurrentFragment = DIRECTOR_FRAGMENT;
-                getSupportActionBar().setCustomView(R.layout.director_layout_custom);
-            }
-        }
+
+                Intent i = new Intent(getApplicationContext(), CanidaeActivity.class);
+                startActivity(i);
+                getSupportActionBar().setCustomView(R.layout.canidae_layout_custom);
+
+        } //else if (id == R.id.nav_gmnb) {
+//            if(mCurrentFragment != HOT_SEARCH_FRAGMENT){
+//                replaceFragment(new HotSearchFragment());
+//                mCurrentFragment = HOT_SEARCH_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.hot_search_layout_custom);
+//            }
+//        } else if (id == R.id.nav_dsyt) {
+//            if(mCurrentFragment != FAVORITE_FRAGMENT){
+//                replaceFragment(new FavoriteFragment());
+//                mCurrentFragment = FAVORITE_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.favorite_layout_custom);
+//            }
+//        } else if (id == R.id.nav_eykh) {
+//            if(mCurrentFragment != SCIENT_FRAGMENT){
+//                replaceFragment(new ScientFragment());
+//                mCurrentFragment = SCIENT_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.scient_layout_custom);
+//            }
+//        } else if (id == R.id.nav_dv) {
+//            if(mCurrentFragment != QUIZ_FRAGMENT){
+//                replaceFragment(new QuizFragment());
+//                mCurrentFragment = QUIZ_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.quiz_layout_custom);
+//            }
+//        } else if (id == R.id.nav_cstc) {
+//            if(mCurrentFragment != PET_FRAGMENT){
+//                replaceFragment(new PetFragment());
+//                mCurrentFragment = PET_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.pet_layout_custom);
+//            }
+//        } else if (id == R.id.nav_hd) {
+//            if(mCurrentFragment != HELP_FRAGMENT){
+//                replaceFragment(new HelpFragment());
+//                mCurrentFragment = HELP_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.help_layout_custom);
+//            }
+//        } else if (id == R.id.nav_tg) {
+//            if(mCurrentFragment != DIRECTOR_FRAGMENT){
+//                replaceFragment(new DirectorFragment());
+//                mCurrentFragment = DIRECTOR_FRAGMENT;
+//                getSupportActionBar().setCustomView(R.layout.director_layout_custom);
+//            }
+//        }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
@@ -167,10 +169,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    private void replaceFragment(Fragment fragment){
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.content_frame, fragment);
-        transaction.commit();
-    }
+//    private void replaceFragment(Fragment fragment){
+//        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//        transaction.replace(R.id.content_frame, fragment);
+//        transaction.commit();
+//    }
 }
 
