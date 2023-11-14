@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/body"
     tools:context=".Quizz.quizz_finish">
 
     <!-- TODO: Update blank fragment layout -->
@@ -73,4 +73,11 @@
         android:src="@drawable/refresh_quiz" />
 
 
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/hinh_back"
+        />
 </FrameLayout>

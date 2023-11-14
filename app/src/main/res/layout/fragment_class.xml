@@ -47,31 +47,11 @@
                 android:layout_height="150dp"
 
                 android:layout_centerInParent="true"
-                android:src="@drawable/bufalo1">
+                android:src="@drawable/dong_vat_co_vu">
 
             </ImageView>
 
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="120dp"
-                android:text="Động vật có vú ">
-
-            </TextView>
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="135dp"
-                android:text="Mammals">
-
-            </TextView>
 
         </RelativeLayout>
 
@@ -95,29 +75,10 @@
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/birds">
+                android:src="@drawable/chim">
 
             </ImageView>
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:text="Chim"
-                android:layout_marginLeft="75dp"
-                android:layout_marginTop="130dp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:text="Birds"
-                android:layout_marginLeft="75dp"
-                android:layout_marginTop="145dp"
-
-                android:layout_height="wrap_content">
-
-            </TextView>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -140,29 +101,11 @@
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/reptile">
+                android:src="@drawable/bo_sat">
 
             </ImageView>
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:text="Bò sát"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="130dp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content">
 
-            </TextView>
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:text="Reptile"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="145dp"
-
-                android:layout_height="wrap_content">
-
-            </TextView>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -185,29 +128,10 @@
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/fish">
+                android:src="@drawable/ca">
 
             </ImageView>
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:text="Cá"
-                android:layout_marginLeft="78dp"
-                android:layout_marginTop="130dp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:text="Fish"
-                android:layout_marginLeft="75dp"
-                android:layout_marginTop="145dp"
-
-                android:layout_height="wrap_content">
-
-            </TextView>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -230,29 +154,10 @@
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/frog">
+                android:src="@drawable/luong_cu">
 
             </ImageView>
-            <TextView
 
-                android:layout_width="wrap_content"
-                android:text="Lưỡng cư"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="130dp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:text="Amphibians"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="145dp"
-
-                android:layout_height="wrap_content">
-
-            </TextView>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -275,31 +180,10 @@
                 android:layout_width="120dp"
                 android:layout_height="150dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/snail">
+                android:src="@drawable/khong_xuong_song">
 
             </ImageView>
-            <TextView
 
-                android:layout_width="wrap_content"
-
-                android:text="Không xương sống"
-                android:layout_marginLeft="29dp"
-                android:layout_marginTop="130dp"
-
-                android:textStyle="bold"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:text="Invertebrates"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="145dp"
-
-                android:layout_height="wrap_content">
-
-            </TextView>
 
         </RelativeLayout>
 
