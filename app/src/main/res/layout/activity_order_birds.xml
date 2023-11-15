@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Orders.Order_birds_activity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@color/body"
+        tools:context=".Order.InvertebratesActivity">
+
+
+        <androidx.gridlayout.widget.GridLayout
+
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="10dp"
+            android:background="@color/body"
+            android:layout_height="0dp"
+            app:columnCount="2"
+            app:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                app:cardElevation="0dp"
+
+                app:cardCornerRadius="15dp"
+                app:layout_rowWeight="1"
+                app:layout_columnWeight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/body"
+                    >
+
+                    <ImageView
+
+                        android:id="@+id/ivBose"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bose">
+
+                    </ImageView>
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                android:layout_margin="5dp"
+                app:layout_rowWeight="1"
+                app:layout_columnWeight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/body"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivBobocau"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bobocau">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                android:layout_margin="5dp"
+                app:layout_rowWeight="1"
+                app:layout_columnWeight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/body"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivBoung"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/boung">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                android:layout_margin="5dp"
+                app:layout_rowWeight="1"
+                app:layout_columnWeight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/body"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivBodadieu"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bodadieu">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                android:layout_margin="5dp"
+                app:layout_rowWeight="1"
+                app:layout_columnWeight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/body"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivBongong"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bongong">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp"
+                android:layout_margin="5dp"
+                app:layout_rowWeight="1"
+                app:layout_columnWeight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/body"
+                    >
+
+                    <ImageView
+                        android:id="@+id/ivBodaibang"
+                        android:layout_width="120dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/bodaibang">
+
+                    </ImageView>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/body"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:src="@drawable/hinh_back"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="13dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+
+            android:text="Chim"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="96dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Birds"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="29dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

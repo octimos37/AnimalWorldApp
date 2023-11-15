@@ -9,21 +9,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.myapplication.fragment.ClassFragment;
-import com.example.myapplication.fragment.DirectorFragment;
-import com.example.myapplication.fragment.FavoriteFragment;
-import com.example.myapplication.fragment.HelpFragment;
-import com.example.myapplication.fragment.HotSearchFragment;
-import com.example.myapplication.fragment.NewUpdateFragment;
-import com.example.myapplication.fragment.PetFragment;
-import com.example.myapplication.fragment.QuizFragment;
-import com.example.myapplication.fragment.ScientFragment;
+import com.example.myapplication.Activity.ClassFragment;
+import com.example.myapplication.Activity.DirectorFragment;
+import com.example.myapplication.Activity.FavoriteFragment;
+import com.example.myapplication.Activity.HelpFragment;
+import com.example.myapplication.Activity.HotSearchFragment;
+import com.example.myapplication.Activity.NewUpdateFragment;
+import com.example.myapplication.Activity.PetFragment;
+import com.example.myapplication.Activity.QuizFragment;
+import com.example.myapplication.Activity.ScientFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
