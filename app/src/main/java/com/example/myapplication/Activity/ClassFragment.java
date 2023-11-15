@@ -1,4 +1,4 @@
-package com.example.myapplication.fragment;
+package com.example.myapplication.Activity;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.myapplication.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ScientFragment#newInstance} factory method to
+ * Use the {@link ClassFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ScientFragment extends Fragment {
+public class ClassFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class ScientFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ScientFragment() {
+    public ClassFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class ScientFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ScientFragment.
+     * @return A new instance of fragment ClassFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ScientFragment newInstance(String param1, String param2) {
-        ScientFragment fragment = new ScientFragment();
+    public static ClassFragment newInstance(String param1, String param2) {
+        ClassFragment fragment = new ClassFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class ScientFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_scient, container, false);
+        return inflater.inflate(R.layout.fragment_class, container, false);
     }
 }

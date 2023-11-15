@@ -1,25 +1,21 @@
-package com.example.myapplication.fragment;
+package com.example.myapplication.Activity;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import androidx.appcompat.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
-import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DirectorFragment#newInstance} factory method to
+ * Use the {@link NewUpdateFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DirectorFragment extends Fragment {
+public class NewUpdateFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,9 +26,7 @@ public class DirectorFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private WebView webview;
-
-    public DirectorFragment() {
+    public NewUpdateFragment() {
         // Required empty public constructor
     }
 
@@ -42,11 +36,11 @@ public class DirectorFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DirectorFragment.
+     * @return A new instance of fragment NewUpdateFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DirectorFragment newInstance(String param1, String param2) {
-        DirectorFragment fragment = new DirectorFragment();
+    public static NewUpdateFragment newInstance(String param1, String param2) {
+        NewUpdateFragment fragment = new NewUpdateFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -56,7 +50,6 @@ public class DirectorFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
@@ -64,12 +57,10 @@ public class DirectorFragment extends Fragment {
         }
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        getActivity().setTitle("Tác giả");
-        return inflater.inflate(R.layout.fragment_director, container, false);
-
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_new_update, container, false);
     }
 }

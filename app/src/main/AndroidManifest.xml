@@ -15,21 +15,54 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Quizz.quizz_incorrect_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Quizz.quizz_finish_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Quizz.quizz_correct_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Quizz.Quizz_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Family.family_carnivora_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Orders.Order_reptile_activitty"
+            android:exported="false" />
+        <activity
+            android:name=".Orders.Order_invertebrates_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Orders.Order_fish_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Orders.Order_birds_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Orders.Order_animal_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Orders.Order_amphibians_activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Class_activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".OnboardingActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
         <meta-data
             android:name="preloaded_fonts"
