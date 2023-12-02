@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Animals World</string>
+    <string name="app_name">Animal World</string>
     <string name="header">Động vật</string>
     <string name="animalText">Animal</string>
     <string name="about_us">About Us</string>

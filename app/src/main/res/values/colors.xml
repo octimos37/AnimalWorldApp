@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="body">#18191A</color>
     <color name="body1">#FF060606</color>
+    <color name="line1">#FF1E1E1E</color>
+    <color name="animal">#FF060606</color>
 </resources>
