@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="-5dp"
         android:fontFamily="@font/roboto"
-        android:text="Mammals"
+        android:text="Mammalia"
         android:textStyle="normal" />
 
 </LinearLayout>

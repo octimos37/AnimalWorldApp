@@ -18,8 +18,13 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.myapplication.Amphibia.AmphibiaActivity;
+import com.example.myapplication.Birds.BirdsActivity;
+import com.example.myapplication.Invertebrata.InvertebartaActivity;
 import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.Pisces.PiscesActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.Reptilia.ReptiliaActivity;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
 
@@ -106,19 +111,34 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 2){
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ClassActivity.this, BirdsActivity.class);
+            intent.putExtra("idclas", itemId);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 3){
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ClassActivity.this, ReptiliaActivity.class);
+            intent.putExtra("idclas", itemId);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 4){
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ClassActivity.this, PiscesActivity.class);
+            intent.putExtra("idclas", itemId);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 5){
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ClassActivity.this, AmphibiaActivity.class);
+            intent.putExtra("idclas", itemId);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else {
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ClassActivity.this, InvertebartaActivity.class);
+            intent.putExtra("idclas", itemId);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
     }
 

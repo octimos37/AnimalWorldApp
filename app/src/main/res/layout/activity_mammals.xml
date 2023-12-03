@@ -16,7 +16,6 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        tools:context=".Class.ClassActivity"
         android:background="@color/body">
 
         <androidx.constraintlayout.widget.ConstraintLayout
