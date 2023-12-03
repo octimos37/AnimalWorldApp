@@ -127,8 +127,7 @@ public class CanidaeDetailActivity extends AppCompatActivity implements Navigati
         imageViewback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanidaeDetailActivity.this, CanidaeActivity.class);
-                startActivity(intent);
+                finish();
                 overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
             }
         });

@@ -23,6 +23,7 @@ import com.example.myapplication.Birds.BirdsActivity;
 import com.example.myapplication.Invertebrata.InvertebartaActivity;
 import com.example.myapplication.Mammals.MammalsActivity;
 import com.example.myapplication.Pisces.PiscesActivity;
+import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.Reptilia.ReptiliaActivity;
 import com.example.myapplication.fragment.ClassFragment;
@@ -91,6 +92,8 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
 
         replaceFragment(new ClassFragment());
         navigationView.getMenu().findItem(R.id.nav_kp).setChecked(true);
+
+
     }
 
     private void loadData() {
@@ -146,6 +149,13 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(ClassActivity.this,ClassActivity.class));
+        }else if(id == R.id.nav_dv){
+            startActivity(new Intent(ClassActivity.this, QuizActivity.class));
+        }
         return false;
     }
     @Override
