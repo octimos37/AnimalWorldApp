@@ -44,7 +44,8 @@ public class GetClassFromApi extends AsyncTask<Void, Void, List<Class>> {
                     String id = data.getString("idclas");
                     //String textData = data.getString("FamilyNameTV");
                     String image_path = data.getString("ImageClass");
-                    Class entity = new Class(id, image_path);
+                    String des = data.getString("descriptionClass");
+                    Class entity = new Class(id, image_path, des);
                     result.add(entity);
                 }
             }

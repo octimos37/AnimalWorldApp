@@ -4,14 +4,23 @@ public class Class {
     private String id;
     private String textData;
     private String image_path;
+    private String descriptionClass;
 
+    public Class(String id, String image_path, String descriptionClass) {
+        this.id = id;
+        this.image_path = image_path;
+        this.descriptionClass = descriptionClass;
+    }
     public Class() {
     }
 
-    public Class(String id, String image_path) {
-        this.id = id;
-        //this.textData = textData;
-        this.image_path = image_path;
+
+    public String getDescriptionClass() {
+        return descriptionClass;
+    }
+
+    public void setDescriptionClass(String description) {
+        this.descriptionClass = description;
     }
 
     public String getId() {
@@ -22,13 +31,6 @@ public class Class {
         this.id = id;
     }
 
-//    public String getTextData() {
-//        return textData;
-//    }
-//
-//    public void setTextData(String textData) {
-//        this.textData = textData;
-//    }
 
     public String getImage_path() {
         return image_path;

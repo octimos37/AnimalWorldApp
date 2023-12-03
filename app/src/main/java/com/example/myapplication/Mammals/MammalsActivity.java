@@ -7,16 +7,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeFactFragment;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
@@ -28,7 +36,9 @@ import java.util.List;
 public class MammalsActivity extends AppCompatActivity implements MammalsAdapter.OnItemClickListener, NavigationView.OnNavigationItemSelectedListener {
     private RecyclerView recyclerView_class;
     private MammalsAdapter adapter;
+    private Mammals mammals;
     private Button btnNext;
+    private LinearLayout lnly;
     private List<Mammals> itemList;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
@@ -47,6 +57,11 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
 
 
     private int mCurrentFragment = CLASS_FRAGMENT;
+    private boolean flag = false;
+
+    FragmentTransaction tran;
+    FragmentManager fragmentManager;
+    LearnMammalsFragment fragment;
 
 
     @Override
@@ -58,6 +73,7 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
 
         Intent intent = getIntent();
         int itemId = intent.getIntExtra("idclas", 0);
+        String des = intent.getStringExtra("descriptionClass");
 
         recyclerView_class = findViewById(R.id.rcvMammals);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
@@ -84,6 +100,25 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
 
         replaceFragment(new ClassFragment());
         navigationView.getMenu().findItem(R.id.nav_kp).setChecked(true);
+        fragmentManager = getSupportFragmentManager();
+        fragment = LearnMammalsFragment.newInstance(des);
+
+        LinearLayout learn = findViewById(R.id.lnly_class);
+        learn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (flag) {
+                    // Close the fragment
+                    closeFragment();
+                    animateBack();
+                } else {
+                    // Open the fragment
+                    openFragment();
+                    animateGo();
+                }
+            }
+        });
+
     }
 
     private void loadData() {
@@ -135,5 +170,30 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
 
     private void replaceFragment(Fragment fragment){
 
+    }
+    private void openFragment() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frm_list, fragment);
+        fragmentTransaction.commit();
+        flag = true;
+    }
+
+    private void closeFragment() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.remove(fragment);
+        fragmentTransaction.commit();
+        flag = false;
+    }
+    private void animateGo() {
+        ImageView arrow = findViewById(R.id.iv_arrow);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(arrow, "rotation", 0f, 90f);
+        animator.setDuration(250); // Set the animation duration in milliseconds
+        animator.start();
+    }
+    private void animateBack() {
+        ImageView arrow = findViewById(R.id.iv_arrow);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(arrow, "rotation", 90f, 0f);
+        animator.setDuration(250); // Set the animation duration in milliseconds
+        animator.start();
     }
 }

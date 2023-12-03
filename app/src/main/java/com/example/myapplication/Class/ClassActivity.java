@@ -102,11 +102,13 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
         getDataTask.execute();
     }
 
+
     @Override
-    public void onItemClick(int itemId) {
+    public void onItemClick(int itemId, String des) {
         if(itemId == 1){
             Intent intent = new Intent(ClassActivity.this, MammalsActivity.class);
             intent.putExtra("idclas", itemId);
+            intent.putExtra("descriptionClass", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
@@ -171,4 +173,6 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
     private void replaceFragment(Fragment fragment){
 
     }
+
+
 }

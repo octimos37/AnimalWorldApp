@@ -5,6 +5,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.myapplication.CarnivoraFamilies.Canidae.Canidae;
+import com.example.myapplication.Mammals.Mammals;
 import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
@@ -38,7 +41,8 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder>{
             if (position != RecyclerView.NO_POSITION) {
                 Class item = data.get(position);
                 String itemId = item.getId();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String des = item.getDescriptionClass();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), des);
             }
         });
 
@@ -61,8 +65,9 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder>{
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String des);
     }
+
 
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.onItemClickListener = listener;

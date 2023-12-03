@@ -45,7 +45,8 @@ public class GetMammalsFromApi extends AsyncTask<Void, Void, List<Mammals>> {
                     String textData = data.getString("OrdoNameE");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Mammals entity = new Mammals(id, textData, image_path, class_id);
+                    String description = data.getString("DescriptionOrdo");
+                    Mammals entity = new Mammals(id, textData, image_path, class_id, description);
                     result.add(entity);
                 }
             }
