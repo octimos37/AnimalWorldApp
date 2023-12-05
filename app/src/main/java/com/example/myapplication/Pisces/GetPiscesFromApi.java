@@ -24,7 +24,7 @@ public class GetPiscesFromApi extends AsyncTask<Void, Void, List<Pisces>> {
         List<Pisces> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.5/GetData/get_fish.php");
+            URL url = new URL("http://192.168.1.108/GetData/get_fish.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

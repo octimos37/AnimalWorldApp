@@ -196,4 +196,6 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
         animator.setDuration(250); // Set the animation duration in milliseconds
         animator.start();
     }
+    public void CameraClick(MenuItem item){
+        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
 }

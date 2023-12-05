@@ -24,7 +24,7 @@ public class GetAmphibiaFromApi extends AsyncTask<Void, Void, List<Amphibia>> {
         List<Amphibia> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.5/GetData/get_amphibia.php");
+            URL url = new URL("http://192.168.1.108/GetData/get_amphibia.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

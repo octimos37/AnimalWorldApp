@@ -22,4 +22,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
     </style>
+    <style name="Theme.MyApplication.SwipeBackTheme">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@color/body</item>
+    </style>
 </resources>

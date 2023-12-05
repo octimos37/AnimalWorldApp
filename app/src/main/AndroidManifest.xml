@@ -15,40 +15,51 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".AnimalClassificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".Quiz.QuizActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Invertebrata.InvertebartaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Amphibia.AmphibiaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Pisces.PiscesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Reptilia.ReptiliaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Birds.BirdsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".CarnivoraFamilies.Canidae.CanidaeDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".CarnivoraFamilies.Canidae.CanidaeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".MammalsOrders.Carnivora.CarnivoraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Mammals.MammalsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Class.ClassActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

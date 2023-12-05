@@ -24,10 +24,9 @@ public class GetMammalsFromApi extends AsyncTask<Void, Void, List<Mammals>> {
         List<Mammals> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.5/GetData/get_mammals.php");
+            URL url = new URL("http://192.168.1.108/GetData/get_mammals.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
-
             int responseCode = httpURLConnection.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 BufferedReader reader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));

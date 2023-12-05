@@ -24,7 +24,7 @@ public class GetQuizFromApi extends AsyncTask<Void, Void, List<Quiz>> {
         List<Quiz> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.5/GetData/get_quiz.php");
+            URL url = new URL("http://192.168.1.108/GetData/get_quiz.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

@@ -11,17 +11,21 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.myapplication.Amphibia.AmphibiaActivity;
 import com.example.myapplication.Birds.BirdsActivity;
 import com.example.myapplication.Invertebrata.InvertebartaActivity;
 import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.OnboardingActivity;
 import com.example.myapplication.Pisces.PiscesActivity;
 import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
@@ -153,8 +157,10 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
 
         if(id == R.id.nav_kp){
             startActivity(new Intent(ClassActivity.this,ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else if(id == R.id.nav_dv){
             startActivity(new Intent(ClassActivity.this, QuizActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         return false;
     }
@@ -184,5 +190,6 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
 
     }
 
-
+    public void CameraClick(MenuItem item){
+        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
 }

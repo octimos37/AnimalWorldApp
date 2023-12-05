@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
@@ -164,4 +165,6 @@ public class CanidaeActivity extends AppCompatActivity implements CanidaeRecycle
     private void replaceFragment(Fragment fragment){
 
     }
+    public void CameraClick(MenuItem item){
+        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
 }

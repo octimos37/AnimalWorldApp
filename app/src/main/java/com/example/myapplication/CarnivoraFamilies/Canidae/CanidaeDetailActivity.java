@@ -182,4 +182,6 @@ public class CanidaeDetailActivity extends AppCompatActivity implements Navigati
     private void replaceFragment(Fragment fragment){
 
     }
+    public void CameraClick(MenuItem item){
+        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
 }

@@ -24,7 +24,7 @@ public class GetReptiliaFromApi extends AsyncTask<Void, Void, List<Reptilia>> {
         List<Reptilia> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.5/GetData/get_reptilia.php");
+            URL url = new URL("http://192.168.1.108/GetData/get_reptilia.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

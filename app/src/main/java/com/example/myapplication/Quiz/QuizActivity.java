@@ -19,8 +19,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 
+import com.example.myapplication.Class.ClassActivity;
 import com.example.myapplication.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -101,12 +103,19 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(QuizActivity.this,ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
         return false;
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -124,5 +133,6 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-
+    public void CameraClick(MenuItem item){
+        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
 }
