@@ -1,4 +1,4 @@
-package com.example.myapplication.Birds;
+package com.example.myapplication.Pet;
 
 import android.os.AsyncTask;
 
@@ -12,19 +12,19 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
-    private BirdsCallback callback;
+public class GetPetFromApi extends AsyncTask<Void, Void, List<Pet>> {
+    private PetCallback callback;
 
-    public GetBirdsFromApi(BirdsCallback callback) {
+    public GetPetFromApi(PetCallback callback) {
         this.callback = callback;
     }
 
     @Override
-    protected List<Birds> doInBackground(Void... voids) {
-        List<Birds> result = new ArrayList<>();
+    protected List<Pet> doInBackground(Void... voids) {
+        List<Pet> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_birds.php");
+            URL url = new URL("http://192.168.1.4/GetData/get_pet.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -41,11 +41,10 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
                 JSONArray jsonArray = new JSONArray(response.toString());
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject data = jsonArray.getJSONObject(i);
-                    String id = data.getString("OrdoID");
-                    String textData = data.getString("OrdoNameE");
-                    String image_path = data.getString("ImageOrdo");
-                    String class_id = data.getString("ClassID");
-                    Birds entity = new Birds(id, textData, image_path, class_id);
+                    String id = data.getString("IdPet");
+                    String name = data.getString("NamePetTV");
+                    String image = data.getString("ImagePet");
+                    Pet entity = new Pet(id, name, image);
                     result.add(entity);
                 }
             }
@@ -58,7 +57,7 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
     }
 
     @Override
-    protected void onPostExecute(List<Birds> myDataEntities) {
+    protected void onPostExecute(List<Pet> myDataEntities) {
         super.onPostExecute(myDataEntities);
         if (callback != null) {
             callback.onDataReceived(myDataEntities);

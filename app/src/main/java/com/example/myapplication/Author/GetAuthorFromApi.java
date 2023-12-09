@@ -1,4 +1,4 @@
-package com.example.myapplication.Birds;
+package com.example.myapplication.Author;
 
 import android.os.AsyncTask;
 
@@ -12,19 +12,19 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
-    private BirdsCallback callback;
+public class GetAuthorFromApi extends AsyncTask<Void, Void, List<Author>> {
+    private AuthorCallback callback;
 
-    public GetBirdsFromApi(BirdsCallback callback) {
+    public GetAuthorFromApi(AuthorCallback callback) {
         this.callback = callback;
     }
 
     @Override
-    protected List<Birds> doInBackground(Void... voids) {
-        List<Birds> result = new ArrayList<>();
+    protected List<Author> doInBackground(Void... voids) {
+        List<Author> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_birds.php");
+            URL url = new URL("http://192.168.1.4/GetData/get_author.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -41,11 +41,12 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
                 JSONArray jsonArray = new JSONArray(response.toString());
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject data = jsonArray.getJSONObject(i);
-                    String id = data.getString("OrdoID");
-                    String textData = data.getString("OrdoNameE");
-                    String image_path = data.getString("ImageOrdo");
-                    String class_id = data.getString("ClassID");
-                    Birds entity = new Birds(id, textData, image_path, class_id);
+                    String id = data.getString("id");
+                    String fullName = data.getString("full_name");
+                    String email = data.getString("email");
+                    String phone = data.getString("Phone");
+                    String image = data.getString("image");
+                    Author entity = new Author(id, fullName, email, phone, image);
                     result.add(entity);
                 }
             }
@@ -58,7 +59,7 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
     }
 
     @Override
-    protected void onPostExecute(List<Birds> myDataEntities) {
+    protected void onPostExecute(List<Author> myDataEntities) {
         super.onPostExecute(myDataEntities);
         if (callback != null) {
             callback.onDataReceived(myDataEntities);

@@ -24,7 +24,7 @@ public class GetInvertebartaFromApi extends AsyncTask<Void, Void, List<Inverteba
         List<Invertebarta> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.108/GetData/get_invertebrata.php");
+            URL url = new URL("http://192.168.1.4/GetData/get_invertebrata.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

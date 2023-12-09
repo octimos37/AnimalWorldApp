@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- the root view must be the DrawerLayout -->
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layoutCanidae"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Author.AuthorActivity"
+    tools:ignore="HardcodedText">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/body">
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/roboto"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="8dp"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp"
+                android:paddingTop="25dp"
+                android:text="Animal World là một ứng dụng được chúng tôi tạo ra nhằm giúp trẻ em có thể dễ dàng khám phá thế giới động vật đầy lý thú chỉ với những cú chạm.  \n\nTất cả những thông tin mà chúng tôi cung cấp đều đã được kiểm chứng tại những nguồn uy tín và đáng tin cậy."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/v_line"
+                />
+            <View
+                android:id="@+id/v_line"
+                style="@style/Divider"
+                android:background="@color/line1"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_3"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chúng tôi là:"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/v_line"
+                android:paddingTop="20dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_4"
+                android:paddingTop="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+    <!-- include the menu created in the menu folder -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_viewCanidae"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>
