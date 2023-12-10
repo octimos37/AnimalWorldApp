@@ -24,6 +24,8 @@ import com.example.myapplication.Birds.BirdsActivity;
 import com.example.myapplication.Class.ClassActivity;
 import com.example.myapplication.Invertebrata.InvertebartaActivity;
 import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.Pet.PetTopic.CatTopicActivity;
+import com.example.myapplication.Pet.PetTopic.DogTopicActivity;
 import com.example.myapplication.Pisces.PiscesActivity;
 import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
@@ -90,7 +92,7 @@ public class PetActivity extends AppCompatActivity implements PetAdapter.OnItemC
         // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        navigationView.getMenu().findItem(R.id.nav_kp).setChecked(true);
+        navigationView.getMenu().findItem(R.id.nav_cstc).setChecked(true);
 
 
     }
@@ -106,16 +108,17 @@ public class PetActivity extends AppCompatActivity implements PetAdapter.OnItemC
 
 
     @Override
-    public void onItemClick(int itemId) {
+    public void onItemClick(int itemId, String title) {
         if(itemId == 1){
-            Intent intent = new Intent(PetActivity.this, MammalsActivity.class);
+            Intent intent = new Intent(PetActivity.this, DogTopicActivity.class);
             intent.putExtra("IdPet", itemId);
+            intent.putExtra("NamePetTV", title);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 2){
-            Intent intent = new Intent(PetActivity.this, BirdsActivity.class);
-            intent.putExtra("IdPet", itemId);
+            Intent intent = new Intent(PetActivity.this, CatTopicActivity.class);
+            intent.putExtra("NamePetTV", itemId);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }

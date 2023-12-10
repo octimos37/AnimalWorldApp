@@ -16,6 +16,7 @@
         <item name="android:itemBackground">@color/body</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:actionButtonStyle">@style/ActionButton</item>
+        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
     </style>
     <style name="Theme.RemoveActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar"></style>
     <style name="Divider">
@@ -26,4 +27,5 @@
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowBackground">@color/body</item>
     </style>
+
 </resources>

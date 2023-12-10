@@ -39,7 +39,8 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder>{
             if (position != RecyclerView.NO_POSITION) {
                 Pet item = data.get(position);
                 String itemId = item.getId();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String title = item.getName();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), title);
             }
         });
 
@@ -62,7 +63,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder>{
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String title);
     }
 
 
