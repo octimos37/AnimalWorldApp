@@ -24,7 +24,7 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
         List<Birds> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_birds.php");
+            URL url = new URL("http://192.168.1.131/GetData/get_birds.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

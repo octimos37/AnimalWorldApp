@@ -50,8 +50,10 @@
             android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".Birds.BirdsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme">
+
+        </activity>
         <activity
             android:name=".CarnivoraFamilies.Canidae.CanidaeDetailActivity"
             android:exported="false"

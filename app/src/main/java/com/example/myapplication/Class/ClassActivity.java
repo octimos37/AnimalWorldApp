@@ -125,30 +125,35 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
         else if(itemId == 2){
             Intent intent = new Intent(ClassActivity.this, BirdsActivity.class);
             intent.putExtra("idclas", itemId);
+            intent.putExtra("descriptionClass", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 3){
             Intent intent = new Intent(ClassActivity.this, ReptiliaActivity.class);
             intent.putExtra("idclas", itemId);
+            intent.putExtra("descriptionClass", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 4){
             Intent intent = new Intent(ClassActivity.this, PiscesActivity.class);
             intent.putExtra("idclas", itemId);
+            intent.putExtra("descriptionClass", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else if(itemId == 5){
             Intent intent = new Intent(ClassActivity.this, AmphibiaActivity.class);
             intent.putExtra("idclas", itemId);
+            intent.putExtra("descriptionClass", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         else {
             Intent intent = new Intent(ClassActivity.this, InvertebartaActivity.class);
             intent.putExtra("idclas", itemId);
+            intent.putExtra("descriptionClass", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
