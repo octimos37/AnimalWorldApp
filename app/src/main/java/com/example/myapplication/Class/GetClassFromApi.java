@@ -42,10 +42,11 @@ public class GetClassFromApi extends AsyncTask<Void, Void, List<Class>> {
                 for (int i = 0; i < jsonArray.length(); i++) {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("idclas");
-                    //String textData = data.getString("FamilyNameTV");
                     String image_path = data.getString("ImageClass");
                     String des = data.getString("descriptionClass");
-                    Class entity = new Class(id, image_path, des);
+                    String nameE = data.getString("ClassNameE");
+                    String nameTV = data.getString("ClassNameTV");
+                    Class entity = new Class(id, image_path, des, nameE, nameTV);
                     result.add(entity);
                 }
             }

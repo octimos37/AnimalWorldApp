@@ -42,10 +42,11 @@ public class GetMammalsFromApi extends AsyncTask<Void, Void, List<Mammals>> {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("OrdoID");
                     String textData = data.getString("OrdoNameE");
+                    String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
                     String description = data.getString("DescriptionOrdo");
-                    Mammals entity = new Mammals(id, textData, image_path, class_id, description);
+                    Mammals entity = new Mammals(id, textData, nameTV, image_path, class_id, description);
                     result.add(entity);
                 }
             }

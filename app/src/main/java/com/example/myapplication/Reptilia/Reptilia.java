@@ -2,13 +2,15 @@ package com.example.myapplication.Reptilia;
 
 public class Reptilia {
     private String OrdoID;
-    private String OrdoName;
+    private String OrdoNameE;
+    private String OrdoNameTV;
     private String ImageOrdo;
     private String ClassID;
 
-    public Reptilia(String ordoID, String ordoName, String imageOrdo, String classID) {
+    public Reptilia(String ordoID, String ordoNameE, String ordoNameTV, String imageOrdo, String classID) {
         OrdoID = ordoID;
-        OrdoName = ordoName;
+        OrdoNameE = ordoNameE;
+        OrdoNameTV = ordoNameTV;
         ImageOrdo = imageOrdo;
         ClassID = classID;
     }
@@ -21,12 +23,20 @@ public class Reptilia {
         OrdoID = ordoID;
     }
 
-    public String getOrdoName() {
-        return OrdoName;
+    public String getOrdoNameE() {
+        return OrdoNameE;
     }
 
-    public void setOrdoName(String ordoName) {
-        OrdoName = ordoName;
+    public void setOrdoNameE(String ordoNameE) {
+        OrdoNameE = ordoNameE;
+    }
+
+    public String getOrdoNameTV() {
+        return OrdoNameTV;
+    }
+
+    public void setOrdoNameTV(String ordoNameTV) {
+        OrdoNameTV = ordoNameTV;
     }
 
     public String getImageOrdo() {

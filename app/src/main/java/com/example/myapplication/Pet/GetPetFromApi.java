@@ -24,7 +24,7 @@ public class GetPetFromApi extends AsyncTask<Void, Void, List<Pet>> {
         List<Pet> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_pet.php");
+            URL url = new URL("http://192.168.1.131/GetData/get_pet.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

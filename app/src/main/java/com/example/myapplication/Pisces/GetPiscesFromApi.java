@@ -24,7 +24,7 @@ public class GetPiscesFromApi extends AsyncTask<Void, Void, List<Pisces>> {
         List<Pisces> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_fish.php");
+            URL url = new URL("http://192.168.1.131/GetData/get_fish.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -43,9 +43,10 @@ public class GetPiscesFromApi extends AsyncTask<Void, Void, List<Pisces>> {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("OrdoID");
                     String textData = data.getString("OrdoNameE");
+                    String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Pisces entity = new Pisces(id, textData, image_path, class_id);
+                    Pisces entity = new Pisces(id, textData, nameTV, image_path, class_id);
                     result.add(entity);
                 }
             }

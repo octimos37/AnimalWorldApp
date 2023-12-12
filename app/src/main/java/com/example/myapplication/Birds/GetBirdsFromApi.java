@@ -43,9 +43,10 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("OrdoID");
                     String textData = data.getString("OrdoNameE");
+                    String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Birds entity = new Birds(id, textData, image_path, class_id);
+                    Birds entity = new Birds(id,  textData, nameTV, image_path, class_id);
                     result.add(entity);
                 }
             }

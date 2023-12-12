@@ -43,9 +43,10 @@ public class GetAmphibiaFromApi extends AsyncTask<Void, Void, List<Amphibia>> {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("OrdoID");
                     String textData = data.getString("OrdoNameE");
+                    String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Amphibia entity = new Amphibia(id, textData, image_path, class_id);
+                    Amphibia entity = new Amphibia(id,  textData, nameTV, image_path, class_id);
                     result.add(entity);
                 }
             }

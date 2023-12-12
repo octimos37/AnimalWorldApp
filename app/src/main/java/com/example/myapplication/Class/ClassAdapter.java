@@ -54,6 +54,8 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder>{
         Class item = data.get(position);
 
         Picasso.get().load(item.getImage_path()).into(holder.imageView_class);
+        holder.textViewE.setText(item.getNameE());
+        holder.textViewTV.setText(item.getNameTV());
     }
 
     @Override
@@ -75,12 +77,15 @@ public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ViewHolder>{
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView_class;
-        private TextView textView;
+        private TextView textViewE;
+        private TextView textViewTV;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView_class = itemView.findViewById(R.id.iv_class);
+            textViewE = itemView.findViewById(R.id.iv_E);
+            textViewTV = itemView.findViewById(R.id.iv_TV);
         }
     }
 }

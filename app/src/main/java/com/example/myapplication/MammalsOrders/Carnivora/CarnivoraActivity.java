@@ -7,17 +7,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
+import com.example.myapplication.Mammals.LearnMammalsFragment;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -47,6 +54,10 @@ public class CarnivoraActivity extends AppCompatActivity implements CarnivoraAda
 
 
     private int mCurrentFragment = CLASS_FRAGMENT;
+    private boolean flag = false;
+    FragmentTransaction tran;
+    FragmentManager fragmentManager;
+    LearnCarnivoraFragment fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +67,7 @@ public class CarnivoraActivity extends AppCompatActivity implements CarnivoraAda
 
         Intent intent = getIntent();
         int itemId = intent.getIntExtra("OrdoID", 0);
+        String des = intent.getStringExtra("DescriptionOrdo");
 
         recyclerView_class = findViewById(R.id.rcvCarnivora);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
@@ -81,6 +93,24 @@ public class CarnivoraActivity extends AppCompatActivity implements CarnivoraAda
 
         replaceFragment(new ClassFragment());
         navigationView.getMenu().findItem(R.id.nav_kp).setChecked(true);
+        fragmentManager = getSupportFragmentManager();
+        fragment = LearnCarnivoraFragment.newInstance(des);
+
+        LinearLayout learn = findViewById(R.id.lnly_class);
+        learn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (flag) {
+                    // Close the fragment
+                    closeFragment();
+                    animateBack();
+                } else {
+                    // Open the fragment
+                    openFragment();
+                    animateGo();
+                }
+            }
+        });
     }
 
     private void loadData() {
@@ -93,10 +123,11 @@ public class CarnivoraActivity extends AppCompatActivity implements CarnivoraAda
     }
 
     @Override
-    public void onItemClick(int itemId) {
+    public void onItemClick(int itemId, String des) {
         if(itemId == 1){
             Intent intent = new Intent(CarnivoraActivity.this, CanidaeActivity.class);
             intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
@@ -131,6 +162,31 @@ public class CarnivoraActivity extends AppCompatActivity implements CarnivoraAda
 
     private void replaceFragment(Fragment fragment){
 
+    }
+    private void openFragment() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frm_list, fragment);
+        fragmentTransaction.commit();
+        flag = true;
+    }
+
+    private void closeFragment() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.remove(fragment);
+        fragmentTransaction.commit();
+        flag = false;
+    }
+    private void animateGo() {
+        ImageView arrow = findViewById(R.id.iv_arrow);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(arrow, "rotation", 0f, 90f);
+        animator.setDuration(250); // Set the animation duration in milliseconds
+        animator.start();
+    }
+    private void animateBack() {
+        ImageView arrow = findViewById(R.id.iv_arrow);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(arrow, "rotation", 90f, 0f);
+        animator.setDuration(250); // Set the animation duration in milliseconds
+        animator.start();
     }
     public void CameraClick(MenuItem item){
         Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }

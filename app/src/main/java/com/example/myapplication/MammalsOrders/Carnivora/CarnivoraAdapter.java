@@ -39,7 +39,8 @@ public class CarnivoraAdapter extends RecyclerView.Adapter<CarnivoraAdapter.View
             if (position != RecyclerView.NO_POSITION) {
                 Carnivora item = data.get(position);
                 String itemId = item.getFamilyID();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String des = item.getDescriptionFamily();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), des);
             }
         });
 
@@ -51,6 +52,8 @@ public class CarnivoraAdapter extends RecyclerView.Adapter<CarnivoraAdapter.View
         Carnivora item = data.get(position);
 
         Picasso.get().load(item.getImagesFamyli()).into(holder.imageView_class);
+        holder.textViewE.setText(item.getFamilyNameE());
+        holder.textViewTV.setText(item.getFamilyNameTV());
     }
 
     @Override
@@ -62,7 +65,7 @@ public class CarnivoraAdapter extends RecyclerView.Adapter<CarnivoraAdapter.View
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String des);
     }
 
     public void setOnItemClickListener(CarnivoraAdapter.OnItemClickListener listener) {
@@ -71,11 +74,14 @@ public class CarnivoraAdapter extends RecyclerView.Adapter<CarnivoraAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView_class;
-        private TextView textView;
+        private TextView textViewE;
+        private TextView textViewTV;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView_class = itemView.findViewById(R.id.iv_class);
+            textViewE = itemView.findViewById(R.id.iv_E);
+            textViewTV = itemView.findViewById(R.id.iv_TV);
         }
     }
 }

@@ -3,13 +3,15 @@ package com.example.myapplication.MammalsOrders.Carnivora;
 public class Carnivora {
     private String FamilyID;
     private String FamilyNameE;
+    private String FamilyNameTV;
     private String imagesFamyli;
     private String DescriptionFamily;
     private String OrdoID;
 
-    public Carnivora(String familyID, String familyNameE, String imagesFamyli, String descriptionFamily, String ordoID) {
+    public Carnivora(String familyID, String familyNameE, String familyNameTV, String imagesFamyli, String descriptionFamily, String ordoID) {
         FamilyID = familyID;
         FamilyNameE = familyNameE;
+        FamilyNameTV = familyNameTV;
         this.imagesFamyli = imagesFamyli;
         DescriptionFamily = descriptionFamily;
         OrdoID = ordoID;
@@ -29,6 +31,14 @@ public class Carnivora {
 
     public void setFamilyNameE(String familyNameE) {
         FamilyNameE = familyNameE;
+    }
+
+    public String getFamilyNameTV() {
+        return FamilyNameTV;
+    }
+
+    public void setFamilyNameTV(String familyNameTV) {
+        FamilyNameTV = familyNameTV;
     }
 
     public String getImagesFamyli() {

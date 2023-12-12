@@ -15,6 +15,27 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".MammalsOrders.Insectivora.InsectivoraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MammalsOrders.Artiodactyla.ArtiodactylaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MammalsOrders.Cetacea.CetaceaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MammalsOrders.Chiroptera.ChiropteraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MammalsOrders.Monotremata.MonotremataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MammalsOrders.Primates.PrimatesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MammalsOrders.Rodentia.RodentiaActivity"
+            android:exported="false" />
+        <activity
             android:name=".Pet.PetTopic.CatTopicActivity"
             android:exported="false" />
         <activity
@@ -51,9 +72,7 @@
         <activity
             android:name=".Birds.BirdsActivity"
             android:exported="true"
-            android:theme="@style/Theme.MyApplication.SwipeBackTheme">
-
-        </activity>
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".CarnivoraFamilies.Canidae.CanidaeDetailActivity"
             android:exported="false"

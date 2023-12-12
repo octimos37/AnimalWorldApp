@@ -2,14 +2,16 @@ package com.example.myapplication.Mammals;
 
 public class Mammals {
     private String OrdoID;
-    private String OrdoName;
+    private String OrdoNameE;
+    private String OrdoNameTV;
     private String ImageOrdo;
     private String ClassID;
     private String DescriptionOrdo;
 
-    public Mammals(String ordoID, String ordoName, String imageOrdo, String classID, String descriptionOrdo) {
+    public Mammals(String ordoID, String ordoNameE, String ordoNameTV, String imageOrdo, String classID, String descriptionOrdo) {
         OrdoID = ordoID;
-        OrdoName = ordoName;
+        OrdoNameE = ordoNameE;
+        OrdoNameTV = ordoNameTV;
         ImageOrdo = imageOrdo;
         ClassID = classID;
         DescriptionOrdo = descriptionOrdo;
@@ -23,12 +25,20 @@ public class Mammals {
         OrdoID = ordoID;
     }
 
-    public String getOrdoName() {
-        return OrdoName;
+    public String getOrdoNameE() {
+        return OrdoNameE;
     }
 
-    public void setOrdoName(String ordoName) {
-        OrdoName = ordoName;
+    public void setOrdoNameE(String ordoNameE) {
+        OrdoNameE = ordoNameE;
+    }
+
+    public String getOrdoNameTV() {
+        return OrdoNameTV;
+    }
+
+    public void setOrdoNameTV(String ordoNameTV) {
+        OrdoNameTV = ordoNameTV;
     }
 
     public String getImageOrdo() {

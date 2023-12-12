@@ -39,7 +39,8 @@ public class MammalsAdapter extends RecyclerView.Adapter<MammalsAdapter.ViewHold
             if (position != RecyclerView.NO_POSITION) {
                 Mammals item = data.get(position);
                 String itemId = item.getOrdoID();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String des = item.getDescriptionOrdo();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), des);
             }
         });
 
@@ -52,6 +53,8 @@ public class MammalsAdapter extends RecyclerView.Adapter<MammalsAdapter.ViewHold
         Mammals item = data.get(position);
 
         Picasso.get().load(item.getImageOrdo()).into(holder.imageView_class);
+        holder.textViewE.setText(item.getOrdoNameE());
+        holder.textViewTV.setText(item.getOrdoNameTV());
     }
 
     @Override
@@ -63,7 +66,7 @@ public class MammalsAdapter extends RecyclerView.Adapter<MammalsAdapter.ViewHold
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String des);
     }
 
     public void setOnItemClickListener(OnItemClickListener listener) {
@@ -72,11 +75,14 @@ public class MammalsAdapter extends RecyclerView.Adapter<MammalsAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView_class;
-        private TextView textView;
+        private TextView textViewE;
+        private TextView textViewTV;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView_class = itemView.findViewById(R.id.iv_class);
+            textViewE = itemView.findViewById(R.id.iv_E);
+            textViewTV = itemView.findViewById(R.id.iv_TV);
         }
     }
 }

@@ -53,6 +53,8 @@ public class AmphibiaAdapter extends RecyclerView.Adapter<AmphibiaAdapter.ViewHo
         Amphibia item = data.get(position);
 
         Picasso.get().load(item.getImageOrdo()).into(holder.imageView_class);
+        holder.textViewE.setText(item.getOrdoNameE());
+        holder.textViewTV.setText(item.getOrdoNameTV());
     }
 
     @Override
@@ -73,11 +75,14 @@ public class AmphibiaAdapter extends RecyclerView.Adapter<AmphibiaAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ImageView imageView_class;
-        private TextView textView;
+        private TextView textViewE;
+        private TextView textViewTV;
 
         public ViewHolder(View itemView) {
             super(itemView);
             imageView_class = itemView.findViewById(R.id.iv_class);
+            textViewE = itemView.findViewById(R.id.iv_E);
+            textViewTV = itemView.findViewById(R.id.iv_TV);
         }
     }
 }

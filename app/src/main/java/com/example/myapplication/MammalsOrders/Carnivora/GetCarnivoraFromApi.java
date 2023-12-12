@@ -24,7 +24,7 @@ public class GetCarnivoraFromApi extends AsyncTask<Void, Void, List<Carnivora>> 
         List<Carnivora> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_carnivora.php");
+            URL url = new URL("http://192.168.1.131/GetData/get_carnivora.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -43,10 +43,11 @@ public class GetCarnivoraFromApi extends AsyncTask<Void, Void, List<Carnivora>> 
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("FamilyID");
                     String textData = data.getString("FamilyNameE");
+                    String nameTV = data.getString("FamilyNameTV");
                     String image_path = data.getString("imagesFamyli");
                     String class_id = data.getString("DescriptionFamily");
                     String ordo_id = data.getString("OrdoID");
-                    Carnivora entity = new Carnivora(id, textData, image_path, class_id, ordo_id);
+                    Carnivora entity = new Carnivora(id, textData, nameTV, image_path, class_id, ordo_id);
                     result.add(entity);
                 }
             }

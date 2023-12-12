@@ -24,7 +24,7 @@ public class GetReptiliaFromApi extends AsyncTask<Void, Void, List<Reptilia>> {
         List<Reptilia> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_reptilia.php");
+            URL url = new URL("http://192.168.1.131/GetData/get_reptilia.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -43,9 +43,10 @@ public class GetReptiliaFromApi extends AsyncTask<Void, Void, List<Reptilia>> {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("OrdoID");
                     String textData = data.getString("OrdoNameE");
+                    String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Reptilia entity = new Reptilia(id, textData, image_path, class_id);
+                    Reptilia entity = new Reptilia(id, textData, nameTV, image_path, class_id);
                     result.add(entity);
                 }
             }
