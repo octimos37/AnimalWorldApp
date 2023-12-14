@@ -23,6 +23,8 @@ import android.widget.Toast;
 import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.Author.AuthorActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.Canidae;
+import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
+import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeDetailActivity;
 import com.example.myapplication.Class.ClassActivity;
 
 import com.example.myapplication.Quiz.QuizActivity;
@@ -169,6 +171,13 @@ public class DogTopicActivity extends AppCompatActivity implements DogTopicRecyc
 
     @Override
     public void onItemClick(DogTopic dogTopic) {
-        Toast.makeText(this, "Clicked "+dogTopic.getTitle(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(DogTopicActivity.this, DogTopicDetailsActivity.class);
+
+        intent.putExtra("NamePetDetailTV", dogTopic.getTitle());
+        intent.putExtra("ImagePetDetail", dogTopic.getImage());
+        intent.putExtra("PetDetailDes", dogTopic.getDescription());
+
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

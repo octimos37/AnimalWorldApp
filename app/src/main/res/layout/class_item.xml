@@ -48,7 +48,7 @@
                 android:textSize="16sp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Tên" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/iv_E"
@@ -57,7 +57,7 @@
                 android:textSize="14sp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/roboto"
-                android:text="Name" />
+                android:text="" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

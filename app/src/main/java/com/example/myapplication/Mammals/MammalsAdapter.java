@@ -53,8 +53,8 @@ public class MammalsAdapter extends RecyclerView.Adapter<MammalsAdapter.ViewHold
         Mammals item = data.get(position);
 
         Picasso.get().load(item.getImageOrdo()).into(holder.imageView_class);
-        holder.textViewE.setText(item.getOrdoNameE());
-        holder.textViewTV.setText(item.getOrdoNameTV());
+        //holder.textViewE.setText(item.getOrdoNameE());
+        //holder.textViewTV.setText(item.getOrdoNameTV());
     }
 
     @Override

@@ -24,7 +24,7 @@ public class GetCarnivoraFromApi extends AsyncTask<Void, Void, List<Carnivora>> 
         List<Carnivora> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_carnivora.php");
+            URL url = new URL("http://192.168.1.4/GetData/get_carnivora.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
