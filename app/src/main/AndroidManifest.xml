@@ -15,6 +15,351 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".OrthopteraFamilies.Tettigoniidae.TettigoniidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrthopteraFamilies.Tettigoniidae.TettigoniidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrthopteraFamilies.Gryllidae.GryllidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrthopteraFamilies.Gryllidae.GryllidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MonotremataFamilies.Ornithorhynchidae.OrnithorhynchidaeFactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MonotremataFamilies.Ornithorhynchidae.OrnithorhynchidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MonotremataFamilies.Ornithorhynchidae.OrnithorhynchidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LepidopteraFamilies.Papilionidae.PapilionidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LepidopteraFamilies.Papilionidae.PapilionidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LepidopteraFamilies.Nymphalidae.NymphalidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LepidopteraFamilies.Nymphalidae.NymphalidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LamniformesFamilies.Lamnidae.LamnidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LamniformesFamilies.Lamnidae.LamnidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LamniformesFamilies.Alopiidae.AlopiidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LamniformesFamilies.Alopiidae.AlopiidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LacertiliaFamilies.Chamaeleonidae.ChamaeleonidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LacertiliaFamilies.Chamaeleonidae.ChamaeleonidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LacertiliaFamilies.Agamidae.AgamidaeFactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LacertiliaFamilies.Agamidae.AgamidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LacertiliaFamilies.Agamidae.AgamidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InsectivoraFamilies.Erinaceomorpha.ErinaceomorphaDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InsectivoraFamilies.Erinaceomorpha.ErinaceomorphaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HymenopteraFamilies.Formicidae.FormicidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HymenopteraFamilies.Formicidae.FormicidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HymenopteraFamilies.Apidae.ApidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HymenopteraFamilies.Apidae.ApidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GymnophionaFamilies.Ichthyophiidae.IchthyophiidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GymnophionaFamilies.Ichthyophiidae.IchthyophiidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GymnophionaFamilies.Caeciliidae.CaeciliidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GymnophionaFamilies.Caeciliidae.CaeciliidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GalliformesFamilies.Phasianidae.PhasianidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GalliformesFamilies.Phasianidae.PhasianidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GalliformesFamilies.Cracidae.CracidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GalliformesFamilies.Cracidae.CracidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FalconiformesFamilies.Falconidae.FalconidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FalconiformesFamilies.Falconidae.FalconidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FalconiformesFamilies.Accipitridae.AccipitridaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FalconiformesFamilies.Accipitridae.AccipitridaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CypriniformesFamilies.Clariidae.ClariidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CypriniformesFamilies.Clariidae.ClariidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CypriniformesFamilies.Carassius.CarassiusDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CypriniformesFamilies.Carassius.CarassiusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrocodyliaFamilies.Crocodylidae.CrocodylidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrocodyliaFamilies.Crocodylidae.CrocodylidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrocodyliaFamilies.Alligatoridae.AlligatoridaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrocodyliaFamilies.Alligatoridae.AlligatoridaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColumbiformesFamilies.Columbidae.ColumbidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColumbiformesFamilies.Columbidae.ColumbidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColeopteraFamilies.Scarabaeidae.ScarabaeidaeFactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColeopteraFamilies.Scarabaeidae.ScarabaeidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColeopteraFamilies.Scarabaeidae.ScarabaeidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColeopteraFamilies.Carabidae.CarabidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColeopteraFamilies.Carabidae.CarabidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiropteraFamilies.Pteropodidae.PteropodidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiropteraFamilies.Pteropodidae.PteropodidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiropteraFamilies.Phyllostomidae.PhyllostomidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiropteraFamilies.Phyllostomidae.PhyllostomidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Caudata.Hynobiidae.HynobiidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Caudata.Hynobiidae.HynobiidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Caudata.Cryptobranchidae.CryptobranchidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Caudata.Cryptobranchidae.CryptobranchidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArtiodactylaFamilies.Cervidae.CervidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArtiodactylaFamilies.Cervidae.CervidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArtiodactylaFamilies.Bovidae.BovidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArtiodactylaFamilies.Bovidae.BovidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AraneaeFamilies.Salticidae.SalticidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AraneaeFamilies.Salticidae.SalticidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AraneaeFamilies.Lycosidae.LycosidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AraneaeFamilies.Lycosidae.LycosidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnuraFamliles.Ranidae.RanidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnuraFamliles.Ranidae.RanidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnuraFamliles.Bufonidae.BufonidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnuraFamliles.Bufonidae.BufonidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnseriformesFamilies.Anseranatidae.AnseranatidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnseriformesFamilies.Anseranatidae.AnseranatidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReptileOrders.Rhynchocephalia.RhynchocephaliaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReptileOrders.Lacertilia.LacertiliaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReptileOrders.Crocodylia.CrocodyliaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PiscesOrders.Rajiformes.RajiformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PiscesOrders.Pristiformes.PristiformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PiscesOrders.Lamniformes.LamniformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PiscesOrders.Cypriniformes.CypriniformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvertebrataOrders.Orthoptera.OrthopteraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvertebrataOrders.Lepidoptera.LepidopteraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvertebrataOrders.Hymenoptera.HymenopteraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvertebrataOrders.Coleoptera.ColeopteraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvertebrataOrders.Araneae.AraneaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Strigiformes.StrigiformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Psittaciformes.PsittaciformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Pelecaniformes.PelecaniformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Galliformes.GalliformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Columbiformes.ColumbiformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Anseriformes.AnseriformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AmphibiaOrders.Gymnophiona.GymnophionaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AmphibiaOrders.Caudata.CaudataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AmphibiaOrders.Anura.AnuraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PiscesOrders.Carcharhiniformes.CarcharhiniformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReptileOrders.Testudines.TestudinesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReptileOrders.Serpentes.SerpentesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Falconiformes.FalconiformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BirdsOrders.Passeriformes.PasseriformesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RodentiaFamilies.Caviidae.CaviidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RodentiaFamilies.Caviidae.CaviidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CetaceaFamilies.Balaenopteridae.BalaenopteridaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CetaceaFamilies.Balaenopteridae.BalaenopteridaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RodentiaFamilies.Castoridae.CastoridaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RodentiaFamilies.Castoridae.CastoridaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Ursidae.UrsidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Ursidae.UrsidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Procyonidae.ProcyonidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Procyonidae.ProcyonidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Mustelidae.MustelidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Mustelidae.MustelidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Felidae.FelidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CarnivoraFamilies.Felidae.FelidaeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Pet.PetTopic.DogTopicDetailsActivity"
             android:exported="false" />
         <activity

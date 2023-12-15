@@ -24,6 +24,11 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
+import com.example.myapplication.CarnivoraFamilies.Felidae.Felidae;
+import com.example.myapplication.CarnivoraFamilies.Felidae.FelidaeActivity;
+import com.example.myapplication.CarnivoraFamilies.Mustelidae.MustelidaeActivity;
+import com.example.myapplication.CarnivoraFamilies.Procyonidae.ProcyonidaeActivity;
+import com.example.myapplication.CarnivoraFamilies.Ursidae.UrsidaeActivity;
 import com.example.myapplication.Mammals.LearnMammalsFragment;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
@@ -124,8 +129,32 @@ public class CarnivoraActivity extends AppCompatActivity implements CarnivoraAda
 
     @Override
     public void onItemClick(int itemId, String des) {
-        if(itemId == 1){
+        if(itemId == 31){
             Intent intent = new Intent(CarnivoraActivity.this, CanidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(itemId == 29){
+            Intent intent = new Intent(CarnivoraActivity.this, FelidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(itemId == 32){
+            Intent intent = new Intent(CarnivoraActivity.this, UrsidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(itemId == 33){
+            Intent intent = new Intent(CarnivoraActivity.this, MustelidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(itemId == 34){
+            Intent intent = new Intent(CarnivoraActivity.this, ProcyonidaeActivity.class);
             intent.putExtra("FamliyID", itemId);
             intent.putExtra("DescriptionFamily", des);
             startActivity(intent);

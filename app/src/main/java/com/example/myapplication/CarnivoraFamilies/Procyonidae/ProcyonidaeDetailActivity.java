@@ -1,0 +1,16 @@
+package com.example.myapplication.CarnivoraFamilies.Procyonidae;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import com.example.myapplication.R;
+
+public class ProcyonidaeDetailActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_procyonidae_detail);
+    }
+}

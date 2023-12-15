@@ -1,0 +1,16 @@
+package com.example.myapplication.CypriniformesFamilies.Carassius;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import com.example.myapplication.R;
+
+public class CarassiusActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_carassius);
+    }
+}

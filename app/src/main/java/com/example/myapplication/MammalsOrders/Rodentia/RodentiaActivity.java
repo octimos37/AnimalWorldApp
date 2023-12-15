@@ -82,7 +82,7 @@ public class RodentiaActivity extends AppCompatActivity implements RodentiaAdapt
         ActionBar actionBar = getSupportActionBar();
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.primates_layout_custom);
+        getSupportActionBar().setCustomView(R.layout.rodentia_layout_custom);
 
         drawerLayout = findViewById(R.id.my_drawer_layoutRodentia);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);

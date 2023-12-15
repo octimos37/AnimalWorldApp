@@ -12,14 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
-        android:src="@drawable/chuot_tui2" />
+        android:src="@drawable/chuot_tui1" />
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="350dp"
-        android:src="@drawable/bottom" />
+        android:src="@drawable/onb2" />
 
     <Button
         android:layout_width="wrap_content"
@@ -41,30 +41,30 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="176dp"
         android:fontFamily="@font/roboto_bold"
+        android:lineSpacingExtra="7dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/welcome"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="300dp"
-        android:padding="10dp"
-        android:lineSpacingExtra="7dp"
-        />
+        android:textSize="30dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tại đây bạn có thể tìm hiểu về\nđộng vật ở mọi nơi trên thế giới."
-        android:fontFamily="@font/roboto"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="200dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="132dp"
+        android:fontFamily="@font/roboto"
         android:lineSpacingExtra="5dp"
-        />
+        android:layout_centerHorizontal="true"
+        android:text="Tại đây bạn có thể tìm hiểu về\nđộng vật ở mọi nơi trên thế giới."
+        android:textColor="@color/white"
+        android:textSize="16dp" />
 
 
 </RelativeLayout>

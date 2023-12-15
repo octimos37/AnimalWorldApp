@@ -24,7 +24,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeFactFragment;
+import com.example.myapplication.Class.ClassActivity;
 import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
 import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
@@ -145,49 +147,49 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
 
     @Override
     public void onItemClick(int itemId, String des) {
-        if(itemId == 1){
+        if(itemId == 17){
             Intent intent = new Intent(MammalsActivity.this, CarnivoraActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        } else if (itemId == 6) {
+        } else if (itemId == 22) {
             Intent intent = new Intent(MammalsActivity.this, ArtiodactylaActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }else if (itemId == 4) {
+        }else if (itemId == 20) {
             Intent intent = new Intent(MammalsActivity.this, CetaceaActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        } else if (itemId == 5) {
+        } else if (itemId == 21) {
             Intent intent = new Intent(MammalsActivity.this, ChiropteraActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }else if (itemId == 3) {
+        }else if (itemId == 19) {
             Intent intent = new Intent(MammalsActivity.this, PrimatesActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }else if (itemId == 2) {
+        }else if (itemId == 18) {
             Intent intent = new Intent(MammalsActivity.this, RodentiaActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }else if (itemId == 7) {
+        }else if (itemId == 23) {
             Intent intent = new Intent(MammalsActivity.this, MonotremataActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }else if (itemId == 8) {
+        }else if (itemId == 24) {
             Intent intent = new Intent(MammalsActivity.this, InsectivoraActivity.class);
             intent.putExtra("OrdoID", itemId);
             intent.putExtra("DescriptionOrdo", des);
@@ -252,6 +254,8 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(MammalsActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);
+    }
 
 }

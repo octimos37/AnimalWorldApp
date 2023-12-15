@@ -52,8 +52,8 @@ public class CarnivoraAdapter extends RecyclerView.Adapter<CarnivoraAdapter.View
         Carnivora item = data.get(position);
 
         Picasso.get().load(item.getImagesFamyli()).into(holder.imageView_class);
-        //holder.textViewE.setText(item.getFamilyNameE());
-        //holder.textViewTV.setText(item.getFamilyNameTV());
+        holder.textViewE.setText(item.getFamilyNameE());
+        holder.textViewTV.setText(item.getFamilyNameTV());
     }
 
     @Override

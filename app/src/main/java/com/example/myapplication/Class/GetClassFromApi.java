@@ -24,7 +24,7 @@ public class GetClassFromApi extends AsyncTask<Void, Void, List<Class>> {
         List<Class> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_class.php");
+            URL url = new URL("http://192.168.1.119/GetData/get_class.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

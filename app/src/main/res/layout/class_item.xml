@@ -27,7 +27,7 @@
                 android:layout_height="152dp"
                 android:src="@drawable/ic_launcher_background"
                 android:background="@color/body"
-
+                android:scaleType="centerCrop"
                 />
         </LinearLayout>
 
