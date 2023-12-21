@@ -5,14 +5,13 @@ public class Author {
     String fullName;
     String email;
     String phone;
-    String image;
 
-    public Author(String id, String fullName, String email, String phone, String image) {
+
+    public Author(String id, String fullName, String email, String phone) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.phone = phone;
-        this.image = image;
     }
 
     public String getId() {
@@ -45,13 +44,5 @@ public class Author {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 }

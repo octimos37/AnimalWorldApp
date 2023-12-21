@@ -14,13 +14,6 @@
         android:adjustViewBounds="true"
         android:src="@drawable/chuot_tui1" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="350dp"
-        android:src="@drawable/onb2" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="206dp"
         android:fontFamily="@font/roboto_bold"
         android:lineSpacingExtra="7dp"
         android:padding="10dp"

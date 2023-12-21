@@ -6,84 +6,93 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/my_drawer_layout"
+    android:id="@+id/my_drawer_layoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     tools:ignore="HardcodedText">
 
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Class.ClassActivity"
-        android:background="@color/body">
+        android:background="@color/body"
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/lnly_class"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            >
 
-            <LinearLayout
-                android:id="@+id/lnly_class"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/v_line">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/hinh_dau_cham_hoi" />
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/hinh_dau_cham_hoi" />
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Cùng tìm hiểu"
+                android:layout_weight="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                tools:ignore="RtlCompat" />
 
-                <TextView
-                    android:id="@+id/txt"
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Cùng tìm hiểu"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/white"
-                    android:textSize="16dp"
-                    tools:ignore="RtlCompat" />
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/right_arrow" />
+        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/right_arrow" />
-            </LinearLayout>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="633dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:iconifiedByDefault="true"
+            app:iconifiedByDefault="false"
+            app:layout_constraintTop_toBottomOf="@+id/lnly_class"
+            app:queryHint="Search Animals..." />
 
-            <View
-                android:id="@+id/v_line"
-                style="@style/Divider"
-                android:background="@color/line1"
-                app:layout_constraintTop_toBottomOf="@+id/lnly_class"
-                tools:ignore="MissingConstraints" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcvClass"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/body"
-                android:paddingBottom="55dp"
-                app:layout_constraintTop_toBottomOf="@+id/v_line" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </RelativeLayout>
+                app:layout_constraintTop_toBottomOf="@+id/searchView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingTop="50dp"
+                android:text="Chưa có dữ liệu vê loài của họ này"
+                android:textStyle="italic"
+                />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- this the navigation view which draws and shows the navigation drawer -->
     <!-- include the menu created in the menu folder -->
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
+        android:id="@+id/navigation_viewMain"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/black"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
         app:menu="@menu/nav_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

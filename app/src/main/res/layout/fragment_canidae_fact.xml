@@ -59,7 +59,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:layout_marginStart="10dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:layout_weight="1"
             android:fontFamily="@font/roboto"
             android:lineSpacingExtra="5dp"

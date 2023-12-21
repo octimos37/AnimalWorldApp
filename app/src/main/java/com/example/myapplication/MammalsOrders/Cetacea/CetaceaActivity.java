@@ -23,8 +23,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
 
+import com.example.myapplication.CetaceaFamilies.Balaenopteridae.BalaenopteridaeActivity;
+import com.example.myapplication.CetaceaFamilies.Ziphiidae.ZiphiidaeActivity;
+import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -125,14 +129,20 @@ public class CetaceaActivity extends AppCompatActivity implements CetaceaAdapter
 
     @Override
     public void onItemClick(int itemId, String des) {
-        if(itemId == 1){
-            Intent intent = new Intent(CetaceaActivity.this, CanidaeActivity.class);
+        if(itemId == 45){
+            Intent intent = new Intent(CetaceaActivity.this, BalaenopteridaeActivity.class);
             intent.putExtra("FamliyID", itemId);
             intent.putExtra("DescriptionFamily", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        }else{
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+        } else if (itemId == 46) {
+            Intent intent = new Intent(CetaceaActivity.this, ZiphiidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else{
+            Toast.makeText(this, "Hiện tại chưa có thông tin", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -190,5 +200,6 @@ public class CetaceaActivity extends AppCompatActivity implements CetaceaAdapter
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(CetaceaActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

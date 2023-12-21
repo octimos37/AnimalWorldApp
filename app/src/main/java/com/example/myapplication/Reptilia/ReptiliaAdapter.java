@@ -39,7 +39,8 @@ public class ReptiliaAdapter extends RecyclerView.Adapter<ReptiliaAdapter.ViewHo
             if (position != RecyclerView.NO_POSITION) {
                 Reptilia item = data.get(position);
                 String itemId = item.getOrdoID();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String des = item.getDescriptionOrdo();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), des);
             }
         });
 
@@ -65,7 +66,7 @@ public class ReptiliaAdapter extends RecyclerView.Adapter<ReptiliaAdapter.ViewHo
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String des);
     }
 
     public void setOnItemClickListener(ReptiliaAdapter.OnItemClickListener listener) {

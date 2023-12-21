@@ -40,7 +40,8 @@ public class AmphibiaAdapter extends RecyclerView.Adapter<AmphibiaAdapter.ViewHo
             if (position != RecyclerView.NO_POSITION) {
                 Amphibia item = data.get(position);
                 String itemId = item.getOrdoID();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String des = item.getDescriptionOrdo();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), des);
             }
         });
 
@@ -66,7 +67,7 @@ public class AmphibiaAdapter extends RecyclerView.Adapter<AmphibiaAdapter.ViewHo
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String des);
     }
 
     public void setOnItemClickListener(AmphibiaAdapter.OnItemClickListener listener) {

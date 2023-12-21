@@ -24,7 +24,7 @@ public class GetDogTopicFromApi extends AsyncTask<Void, Void, List<DogTopic>> {
         List<DogTopic> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_dogtopic.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_dogtopic.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -45,7 +45,7 @@ public class GetDogTopicFromApi extends AsyncTask<Void, Void, List<DogTopic>> {
                     String title = data.getString("NamePetDetailTV");
                     String image = data.getString("ImagePetDetail");
                     String des = data.getString("PetDetailDes");
-                    String petId = data.getString("IdPetTopic");
+                    String petId = data.getString("IdPet");
                     DogTopic entity = new DogTopic(id, title, image, des, petId);
                     result.add(entity);
                 }

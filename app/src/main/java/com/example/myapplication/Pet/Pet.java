@@ -3,11 +3,13 @@ package com.example.myapplication.Pet;
 public class Pet {
     String id;
     String name;
+    String nameE;
     String image;
 
-    public Pet(String id, String name, String image) {
+    public Pet(String id, String name, String nameE, String image) {
         this.id = id;
         this.name = name;
+        this.nameE = nameE;
         this.image = image;
     }
 
@@ -25,6 +27,14 @@ public class Pet {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getNameE() {
+        return nameE;
+    }
+
+    public void setNameE(String nameE) {
+        this.nameE = nameE;
     }
 
     public String getImage() {

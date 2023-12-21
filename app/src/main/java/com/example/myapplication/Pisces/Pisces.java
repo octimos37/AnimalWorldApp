@@ -3,17 +3,18 @@ package com.example.myapplication.Pisces;
 public class Pisces {
     private String OrdoID;
     private String OrdoNameE;
-
     private String OrdoNameTV;
     private String ImageOrdo;
     private String ClassID;
+    private String DescriptionOrdo;
 
-    public Pisces(String ordoID, String ordoNameE, String ordoNameTV, String imageOrdo, String classID) {
+    public Pisces(String ordoID, String ordoNameE, String ordoNameTV, String imageOrdo, String classID, String descriptionOrdo) {
         OrdoID = ordoID;
         OrdoNameE = ordoNameE;
         OrdoNameTV = ordoNameTV;
         ImageOrdo = imageOrdo;
         ClassID = classID;
+        DescriptionOrdo = descriptionOrdo;
     }
 
     public String getOrdoID() {
@@ -54,5 +55,13 @@ public class Pisces {
 
     public void setClassID(String classID) {
         ClassID = classID;
+    }
+
+    public String getDescriptionOrdo() {
+        return DescriptionOrdo;
+    }
+
+    public void setDescriptionOrdo(String descriptionOrdo) {
+        DescriptionOrdo = descriptionOrdo;
     }
 }

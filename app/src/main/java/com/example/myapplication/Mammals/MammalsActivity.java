@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myapplication.AnimalClassificationActivity;
+import com.example.myapplication.Author.AuthorActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeFactFragment;
 import com.example.myapplication.Class.ClassActivity;
 import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
@@ -40,6 +41,8 @@ import com.example.myapplication.MammalsOrders.Primates.Primates;
 import com.example.myapplication.MammalsOrders.Primates.PrimatesActivity;
 import com.example.myapplication.MammalsOrders.Rodentia.Rodentia;
 import com.example.myapplication.MammalsOrders.Rodentia.RodentiaActivity;
+import com.example.myapplication.Pet.PetActivity;
+import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -56,21 +59,6 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
     private List<Mammals> itemList;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
-
-    public static final String url = "https://www.google.com";
-
-    private static final int CLASS_FRAGMENT = 0;
-    private static final int NEW_UPDATE_FRAGMENT = 1;
-    private static final int HOT_SEARCH_FRAGMENT = 2;
-    private static final int FAVORITE_FRAGMENT = 3;
-    private static final int SCIENT_FRAGMENT = 4;
-    private static final int QUIZ_FRAGMENT = 5;
-    private static final int PET_FRAGMENT = 6;
-    private static final int HELP_FRAGMENT = 7;
-    private static final int DIRECTOR_FRAGMENT = 8;
-
-
-    private int mCurrentFragment = CLASS_FRAGMENT;
     private boolean flag = false;
 
     FragmentTransaction tran;
@@ -201,6 +189,21 @@ public class MammalsActivity extends AppCompatActivity implements MammalsAdapter
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(MammalsActivity.this,ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_dv){
+            startActivity(new Intent(MammalsActivity.this, QuizActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_tg){
+            startActivity(new Intent(MammalsActivity.this, AuthorActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_cstc) {
+            startActivity(new Intent(MammalsActivity.this, PetActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
         return false;
     }
     @Override

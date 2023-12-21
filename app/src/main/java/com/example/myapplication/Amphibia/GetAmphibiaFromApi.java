@@ -24,7 +24,7 @@ public class GetAmphibiaFromApi extends AsyncTask<Void, Void, List<Amphibia>> {
         List<Amphibia> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_amphibia.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_amphibia.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -46,7 +46,8 @@ public class GetAmphibiaFromApi extends AsyncTask<Void, Void, List<Amphibia>> {
                     String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Amphibia entity = new Amphibia(id,  textData, nameTV, image_path, class_id);
+                    String description = data.getString("DescriptionOrdo");
+                    Amphibia entity = new Amphibia(id,  textData, nameTV, image_path, class_id, description);
                     result.add(entity);
                 }
             }

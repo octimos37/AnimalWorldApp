@@ -26,7 +26,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AmphibiaOrders.Anura.AnuraActivity;
+import com.example.myapplication.AnimalClassificationActivity;
+import com.example.myapplication.Author.AuthorActivity;
+import com.example.myapplication.Class.ClassActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.LearnCarnivoraFragment;
+import com.example.myapplication.Pet.PetActivity;
+import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -167,7 +173,22 @@ public class CanidaeActivity extends AppCompatActivity implements CanidaeRecycle
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(CanidaeActivity.this, ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_dv){
+            startActivity(new Intent(CanidaeActivity.this, QuizActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_tg){
+            startActivity(new Intent(CanidaeActivity.this, AuthorActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_cstc) {
+            startActivity(new Intent(CanidaeActivity.this, PetActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }return false;
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -220,5 +241,6 @@ public class CanidaeActivity extends AppCompatActivity implements CanidaeRecycle
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(CanidaeActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);     }
 }

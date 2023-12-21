@@ -23,8 +23,30 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AmphibiaOrders.Anura.AnuraActivity;
+import com.example.myapplication.AnimalClassificationActivity;
+import com.example.myapplication.Author.AuthorActivity;
+import com.example.myapplication.BirdsOrders.Anseriformes.AnseriformesActivity;
+import com.example.myapplication.BirdsOrders.Columbiformes.ColumbiformesActivity;
+import com.example.myapplication.BirdsOrders.Falconiformes.FalconiformesActivity;
+import com.example.myapplication.BirdsOrders.Galliformes.GalliformesActivity;
+import com.example.myapplication.BirdsOrders.Passeriformes.PasseriformesActivity;
+import com.example.myapplication.BirdsOrders.Pelecaniformes.PelecaniformesActivity;
+import com.example.myapplication.BirdsOrders.Psittaciformes.PsittaciformesActivity;
+import com.example.myapplication.BirdsOrders.Strigiformes.StrigiformesActivity;
+import com.example.myapplication.Class.ClassActivity;
 import com.example.myapplication.Mammals.LearnMammalsFragment;
+import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
+import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
+import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
+import com.example.myapplication.MammalsOrders.Insectivora.InsectivoraActivity;
+import com.example.myapplication.MammalsOrders.Monotremata.MonotremataActivity;
+import com.example.myapplication.MammalsOrders.Primates.PrimatesActivity;
+import com.example.myapplication.MammalsOrders.Rodentia.RodentiaActivity;
+import com.example.myapplication.Pet.PetActivity;
+import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -129,10 +151,53 @@ public class BirdsActivity extends AppCompatActivity implements BirdsAdapter.OnI
 
 
     @Override
-    public void onItemClick(int itemId) {
-        if(itemId == 1){
-            Intent intent = new Intent(BirdsActivity.this, CarnivoraActivity.class);
+    public void onItemClick(int itemId, String des) {
+        if(itemId == 25){
+            Intent intent = new Intent(BirdsActivity.this, PasseriformesActivity.class);
             intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 27) {
+            Intent intent = new Intent(BirdsActivity.this, FalconiformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 28) {
+            Intent intent = new Intent(BirdsActivity.this, StrigiformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 29) {
+            Intent intent = new Intent(BirdsActivity.this, AnseriformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 30) {
+            Intent intent = new Intent(BirdsActivity.this, GalliformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 31) {
+            Intent intent = new Intent(BirdsActivity.this, PsittaciformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 32) {
+            Intent intent = new Intent(BirdsActivity.this, ColumbiformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 33) {
+            Intent intent = new Intent(BirdsActivity.this, PelecaniformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
@@ -141,7 +206,21 @@ public class BirdsActivity extends AppCompatActivity implements BirdsAdapter.OnI
     }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return false;
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(BirdsActivity.this, ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_dv){
+            startActivity(new Intent(BirdsActivity.this, QuizActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_tg){
+            startActivity(new Intent(BirdsActivity.this, AuthorActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (id == R.id.nav_cstc) {
+            startActivity(new Intent(BirdsActivity.this, PetActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }return false;
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -194,5 +273,6 @@ public class BirdsActivity extends AppCompatActivity implements BirdsAdapter.OnI
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(BirdsActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);   }
 }

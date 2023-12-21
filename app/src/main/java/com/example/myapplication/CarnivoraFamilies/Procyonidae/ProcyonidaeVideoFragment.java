@@ -3,11 +3,15 @@ package com.example.myapplication.CarnivoraFamilies.Procyonidae;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.VideoView;
 
+import com.example.myapplication.CarnivoraFamilies.Procyonidae.ProcyonidaeVideoFragment;
 import com.example.myapplication.R;
 
 /**
@@ -60,7 +64,31 @@ public class ProcyonidaeVideoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_procyonidae_video, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_procyonidae_video, container, false);
+
+        ImageView close = rootView.findViewById(R.id.iv_close);
+        VideoView video = rootView.findViewById(R.id.vv_video);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.beginTransaction().remove(ProcyonidaeVideoFragment.this).commit();
+            }
+        });
+
+        Bundle args = getArguments();
+        String data = args.getString("AnimalVideo");
+        video.setVideoPath(data);
+        video.start();
+
+        return rootView;
+    }
+
+    public static ProcyonidaeVideoFragment newInstance(String data) {
+        ProcyonidaeVideoFragment fragment = new ProcyonidaeVideoFragment();
+        Bundle args = new Bundle();
+        args.putString("AnimalVideo", data);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

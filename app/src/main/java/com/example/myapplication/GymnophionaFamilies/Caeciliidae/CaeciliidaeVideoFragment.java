@@ -3,10 +3,14 @@ package com.example.myapplication.GymnophionaFamilies.Caeciliidae;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.VideoView;
+
 
 import com.example.myapplication.R;
 
@@ -60,7 +64,31 @@ public class CaeciliidaeVideoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_caeciliidae_video, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_caeciliidae_video, container, false);
+
+        ImageView close = rootView.findViewById(R.id.iv_close);
+        VideoView video = rootView.findViewById(R.id.vv_video);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.beginTransaction().remove(CaeciliidaeVideoFragment.this).commit();
+            }
+        });
+
+        Bundle args = getArguments();
+        String data = args.getString("AnimalVideo");
+        video.setVideoPath(data);
+        video.start();
+
+        return rootView;
+    }
+
+    public static CaeciliidaeVideoFragment newInstance(String data) {
+        CaeciliidaeVideoFragment fragment = new CaeciliidaeVideoFragment();
+        Bundle args = new Bundle();
+        args.putString("AnimalVideo", data);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

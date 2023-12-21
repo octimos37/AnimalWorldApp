@@ -24,7 +24,7 @@ public class GetCatTopicFromApi extends AsyncTask<Void, Void, List<CatTopic>> {
         List<CatTopic> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_cattopic.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_cattopic.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -45,7 +45,7 @@ public class GetCatTopicFromApi extends AsyncTask<Void, Void, List<CatTopic>> {
                     String title = data.getString("NamePetDetailTV");
                     String image = data.getString("ImagePetDetail");
                     String des = data.getString("PetDetailDes");
-                    String petId = data.getString("IdPetTopic");
+                    String petId = data.getString("IdPet");
                     CatTopic entity = new CatTopic(id, title, image, des, petId);
                     result.add(entity);
                 }

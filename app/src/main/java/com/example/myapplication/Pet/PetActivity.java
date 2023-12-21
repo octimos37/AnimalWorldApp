@@ -109,14 +109,14 @@ public class PetActivity extends AppCompatActivity implements PetAdapter.OnItemC
 
     @Override
     public void onItemClick(int itemId, String title) {
-        if(itemId == 1){
+        if(itemId == 17){
             Intent intent = new Intent(PetActivity.this, DogTopicActivity.class);
             intent.putExtra("IdPet", itemId);
             intent.putExtra("NamePetTV", title);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
-        else if(itemId == 2){
+        else if(itemId == 18){
             Intent intent = new Intent(PetActivity.this, CatTopicActivity.class);
             intent.putExtra("NamePetTV", itemId);
             startActivity(intent);

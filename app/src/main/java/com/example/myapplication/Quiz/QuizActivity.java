@@ -22,7 +22,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
+import com.example.myapplication.Author.AuthorActivity;
 import com.example.myapplication.Class.ClassActivity;
+import com.example.myapplication.Pet.PetActivity;
+import com.example.myapplication.Pet.PetTopic.DogTopicDetailsActivity;
 import com.example.myapplication.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -103,10 +106,17 @@ public class QuizActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
         int id = item.getItemId();
 
         if(id == R.id.nav_kp){
-            startActivity(new Intent(QuizActivity.this,ClassActivity.class));
+            startActivity(new Intent(QuizActivity.this, ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_cstc){
+            startActivity(new Intent(QuizActivity.this, PetActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_tg){
+            startActivity(new Intent(QuizActivity.this, AuthorActivity.class));
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
         return false;

@@ -44,8 +44,6 @@ public class AuthorAdapter extends RecyclerView.Adapter<AuthorAdapter.ViewHolder
     public void onBindViewHolder(@NonNull AuthorAdapter.ViewHolder holder, int position) {
         Author item = data.get(position);
 
-        Picasso.get().load(item.getImage()).into(holder.imageView);
-
         holder.textView.setText(item.getFullName());
         holder.textView1.setText(item.getEmail());
         holder.textView2.setText(item.getPhone());

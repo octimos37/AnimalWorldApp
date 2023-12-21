@@ -23,8 +23,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.Invertebrata.LearnInvertebrataFragment;
+import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
+import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
+import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
+import com.example.myapplication.MammalsOrders.Primates.PrimatesActivity;
+import com.example.myapplication.PiscesOrders.Carcharhiniformes.CarcharhiniformesActivity;
+import com.example.myapplication.PiscesOrders.Cypriniformes.CypriniformesActivity;
+import com.example.myapplication.PiscesOrders.Lamniformes.LamniformesActivity;
+import com.example.myapplication.PiscesOrders.Pristiformes.PristiformesActivity;
+import com.example.myapplication.PiscesOrders.Rajiformes.RajiformesActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.Reptilia.LearnReptiliaFragment;
 import com.example.myapplication.fragment.ClassFragment;
@@ -129,14 +140,39 @@ public class PiscesActivity extends AppCompatActivity implements PiscesAdapter.O
 
 
     @Override
-    public void onItemClick(int itemId) {
-        if(itemId == 1){
-            Intent intent = new Intent(PiscesActivity.this, CarnivoraActivity.class);
+    public void onItemClick(int itemId, String des) {
+        if(itemId == 0){
+            Intent intent = new Intent(PiscesActivity.this, CarcharhiniformesActivity.class);
             intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 41) {
+            Intent intent = new Intent(PiscesActivity.this, LamniformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 44) {
+            Intent intent = new Intent(PiscesActivity.this, PristiformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 45) {
+            Intent intent = new Intent(PiscesActivity.this, RajiformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 56) {
+            Intent intent = new Intent(PiscesActivity.this, CypriniformesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hiện tại chưa có thông tin", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -194,5 +230,6 @@ public class PiscesActivity extends AppCompatActivity implements PiscesAdapter.O
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(PiscesActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

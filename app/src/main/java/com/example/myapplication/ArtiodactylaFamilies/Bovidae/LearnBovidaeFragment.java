@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.myapplication.ArtiodactylaFamilies.Bovidae.LearnBovidaeFragment;
 import com.example.myapplication.R;
 
 /**
@@ -60,7 +62,21 @@ public class LearnBovidaeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_learn_bovidae, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_learn_bovidae, container, false);
+
+
+        TextView learn = rootView.findViewById(R.id.tv_learn);
+
+        Bundle args = getArguments();
+        String data = args.getString("DescriptionFamily");
+        learn.setText(data);
+        return rootView;
+    }
+    public static LearnBovidaeFragment newInstance(String data) {
+        LearnBovidaeFragment fragment = new LearnBovidaeFragment();
+        Bundle args = new Bundle();
+        args.putString("DescriptionFamily", data);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

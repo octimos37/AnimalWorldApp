@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,6 +20,120 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Pet.PetTopic.CatTopicDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CetaceaFamilies.Ziphiidae.ZiphiidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CetaceaFamilies.Ziphiidae.ZiphiidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestudinesFamilies.Testudinidae.TestudinidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestudinesFamilies.Testudinidae.TestudinidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestudinesFamilies.Cheloniidae.CheloniidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestudinesFamilies.Cheloniidae.CheloniidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StrigiformesFamilies.Tytonidae.TytonidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StrigiformesFamilies.Tytonidae.TytonidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StrigiformesFamilies.Strigidae.StrigidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StrigiformesFamilies.Strigidae.StrigidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SerpentesFamilies.Pythonidae.PythonidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SerpentesFamilies.Pythonidae.PythonidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SerpentesFamilies.Colubridae.ColubridaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SerpentesFamilies.Colubridae.ColubridaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RhynchocephaliaFamilies.Sphenodontidae.SphenodontidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RhynchocephaliaFamilies.Sphenodontidae.SphenodontidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RajiformesFamilies.Rajidae.RajidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RajiformesFamilies.Rajidae.RajidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RajiformesFamilies.Dasyatidae.DasyatidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RajiformesFamilies.Dasyatidae.DasyatidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PsittaciformesFamilies.Psittacidae.PsittacidaeFactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PsittaciformesFamilies.Psittacidae.PsittacidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PsittaciformesFamilies.Psittacidae.PsittacidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PsittaciformesFamilies.Cacatuidae.CacatuidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PsittaciformesFamilies.Cacatuidae.CacatuidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrimatesFamilies.Hominidae.HominidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrimatesFamilies.Hominidae.HominidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrimatesFamilies.Cercopithecidae.CercopithecidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrimatesFamilies.Cercopithecidae.CercopithecidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PelecaniformesFamilies.Phaethontidae.PhaethontidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PelecaniformesFamilies.Phaethontidae.PhaethontidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PelecaniformesFamilies.Fregatidae.FregatidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PelecaniformesFamilies.Fregatidae.FregatidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasseriformesFamilies.Turdidae.TurdidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasseriformesFamilies.Turdidae.TurdidaeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasseriformesFamilies.Muscicapidae.MuscicapidaeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasseriformesFamilies.Muscicapidae.MuscicapidaeActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrthopteraFamilies.Tettigoniidae.TettigoniidaeDetailActivity"
             android:exported="false" />
         <activity
@@ -27,7 +146,7 @@
             android:name=".OrthopteraFamilies.Gryllidae.GryllidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".MonotremataFamilies.Ornithorhynchidae.OrnithorhynchidaeFactActivity"
+            android:name=".MonotremataFamilies.Ornithorhynchidae.zzz"
             android:exported="false" />
         <activity
             android:name=".MonotremataFamilies.Ornithorhynchidae.OrnithorhynchidaeDetailActivity"
@@ -66,7 +185,7 @@
             android:name=".LacertiliaFamilies.Chamaeleonidae.ChamaeleonidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".LacertiliaFamilies.Agamidae.AgamidaeFactActivity"
+            android:name=".LacertiliaFamilies.Agamidae.llllll"
             android:exported="false" />
         <activity
             android:name=".LacertiliaFamilies.Agamidae.AgamidaeDetailActivity"
@@ -159,7 +278,7 @@
             android:name=".ColumbiformesFamilies.Columbidae.ColumbidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".ColeopteraFamilies.Scarabaeidae.ScarabaeidaeFactActivity"
+            android:name=".ColeopteraFamilies.Scarabaeidae.eFactActivity"
             android:exported="false" />
         <activity
             android:name=".ColeopteraFamilies.Scarabaeidae.ScarabaeidaeDetailActivity"
@@ -186,16 +305,16 @@
             android:name=".ChiropteraFamilies.Phyllostomidae.PhyllostomidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".Caudata.Hynobiidae.HynobiidaeDetailActivity"
+            android:name=".CaudataFamilies.Hynobiidae.HynobiidaeDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Caudata.Hynobiidae.HynobiidaeActivity"
+            android:name=".CaudataFamilies.Hynobiidae.HynobiidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".Caudata.Cryptobranchidae.CryptobranchidaeDetailActivity"
+            android:name=".CaudataFamilies.Cryptobranchidae.CryptobranchidaeDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Caudata.Cryptobranchidae.CryptobranchidaeActivity"
+            android:name=".CaudataFamilies.Cryptobranchidae.CryptobranchidaeActivity"
             android:exported="false" />
         <activity
             android:name=".ArtiodactylaFamilies.Cervidae.CervidaeDetailActivity"
@@ -222,16 +341,16 @@
             android:name=".AraneaeFamilies.Lycosidae.LycosidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".AnuraFamliles.Ranidae.RanidaeDetailActivity"
+            android:name=".AnuraFamilies.Ranidae.RanidaeDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".AnuraFamliles.Ranidae.RanidaeActivity"
+            android:name=".AnuraFamilies.Ranidae.RanidaeActivity"
             android:exported="false" />
         <activity
-            android:name=".AnuraFamliles.Bufonidae.BufonidaeDetailActivity"
+            android:name=".AnuraFamilies.Bufonidae.BufonidaeDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".AnuraFamliles.Bufonidae.BufonidaeActivity"
+            android:name=".AnuraFamilies.Bufonidae.BufonidaeActivity"
             android:exported="false" />
         <activity
             android:name=".AnseriformesFamilies.Anseranatidae.AnseranatidaeDetailActivity"
@@ -440,20 +559,20 @@
         <activity
             android:name=".Class.ClassActivity"
             android:exported="true"
-            android:theme="@style/Theme.MyApplication.SwipeBackTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.MyApplication.SwipeBackTheme" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".OnboardingActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.myapplication.CrocodyliaFamilies.Crocodylidae.LearnCrocodylidaeFragment;
 import com.example.myapplication.R;
 
 /**
@@ -60,7 +62,21 @@ public class LearnCrocodylidaeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_learn_crocodylidae, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_learn_crocodylidae, container, false);
+
+
+        TextView learn = rootView.findViewById(R.id.tv_learn);
+
+        Bundle args = getArguments();
+        String data = args.getString("DescriptionFamily");
+        learn.setText(data);
+        return rootView;
+    }
+    public static LearnCrocodylidaeFragment newInstance(String data) {
+        LearnCrocodylidaeFragment fragment = new LearnCrocodylidaeFragment();
+        Bundle args = new Bundle();
+        args.putString("DescriptionFamily", data);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

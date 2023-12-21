@@ -24,7 +24,7 @@ public class GetArtiodactylaFromApi extends AsyncTask<Void, Void, List<Artiodact
         List<Artiodactyla> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_carnivora.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_artiodactyla.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

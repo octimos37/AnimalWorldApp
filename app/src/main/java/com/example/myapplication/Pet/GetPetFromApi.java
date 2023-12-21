@@ -24,7 +24,7 @@ public class GetPetFromApi extends AsyncTask<Void, Void, List<Pet>> {
         List<Pet> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_pet.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_pet.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -43,8 +43,9 @@ public class GetPetFromApi extends AsyncTask<Void, Void, List<Pet>> {
                     JSONObject data = jsonArray.getJSONObject(i);
                     String id = data.getString("IdPet");
                     String name = data.getString("NamePetTV");
+                    String nameE = data.getString("NamePetE");
                     String image = data.getString("ImagePet");
-                    Pet entity = new Pet(id, name, image);
+                    Pet entity = new Pet(id, name, nameE, image);
                     result.add(entity);
                 }
             }

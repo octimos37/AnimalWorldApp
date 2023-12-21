@@ -23,7 +23,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
+import com.example.myapplication.InsectivoraFamilies.Erinaceomorpha.ErinaceomorphaActivity;
 import com.example.myapplication.MammalsOrders.Chiroptera.Chiroptera;
 import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
 import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraAdapter;
@@ -129,14 +131,14 @@ public class InsectivoraActivity extends AppCompatActivity implements Insectivor
 
     @Override
     public void onItemClick(int itemId, String des) {
-        if(itemId == 1){
-            Intent intent = new Intent(InsectivoraActivity.this, CanidaeActivity.class);
+        if(itemId == 57){
+            Intent intent = new Intent(InsectivoraActivity.this, ErinaceomorphaActivity.class);
             intent.putExtra("FamliyID", itemId);
             intent.putExtra("DescriptionFamily", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hiện tại chưa có thông tin", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -194,5 +196,6 @@ public class InsectivoraActivity extends AppCompatActivity implements Insectivor
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(InsectivoraActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

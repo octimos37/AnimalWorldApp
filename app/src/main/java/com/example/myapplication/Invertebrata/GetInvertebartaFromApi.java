@@ -24,7 +24,7 @@ public class GetInvertebartaFromApi extends AsyncTask<Void, Void, List<Inverteba
         List<Invertebarta> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_invertebrata.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_invertebrata.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -46,7 +46,8 @@ public class GetInvertebartaFromApi extends AsyncTask<Void, Void, List<Inverteba
                     String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Invertebarta entity = new Invertebarta(id,  textData, nameTV, image_path, class_id);
+                    String description = data.getString("DescriptionOrdo");
+                    Invertebarta entity = new Invertebarta(id,  textData, nameTV, image_path, class_id, description);
                     result.add(entity);
                 }
             }

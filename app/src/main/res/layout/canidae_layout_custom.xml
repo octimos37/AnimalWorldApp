@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="-5dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="Họ Chó"
+        android:text="Chó"
         android:textSize="17sp" />
 
     <TextView

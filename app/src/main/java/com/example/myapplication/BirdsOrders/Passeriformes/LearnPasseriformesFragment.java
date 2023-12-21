@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.myapplication.R;
 
@@ -60,7 +61,21 @@ public class LearnPasseriformesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_learn_passeriformes, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_learn_passeriformes, container, false);
+
+
+        TextView learn = rootView.findViewById(R.id.tv_learn);
+
+        Bundle args = getArguments();
+        String data = args.getString("DescriptionOrdo");
+        learn.setText(data);
+        return rootView;
+    }
+    public static LearnPasseriformesFragment newInstance(String data) {
+        LearnPasseriformesFragment fragment = new LearnPasseriformesFragment();
+        Bundle args = new Bundle();
+        args.putString("DescriptionOrdo", data);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

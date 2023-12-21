@@ -28,7 +28,7 @@ public class GetPrimatesFromApi extends AsyncTask<Void, Void, List<Primates>> {
         List<Primates> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_carnivora.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_primates.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

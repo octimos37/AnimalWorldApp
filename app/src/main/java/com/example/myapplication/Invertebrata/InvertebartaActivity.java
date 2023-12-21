@@ -23,8 +23,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.Birds.LearnBirdsFragment;
+import com.example.myapplication.InvertebrataOrders.Araneae.AraneaeActivity;
+import com.example.myapplication.InvertebrataOrders.Coleoptera.ColeopteraActivity;
+import com.example.myapplication.InvertebrataOrders.Hymenoptera.HymenopteraActivity;
+import com.example.myapplication.InvertebrataOrders.Lepidoptera.LepidopteraActivity;
+import com.example.myapplication.InvertebrataOrders.Orthoptera.OrthopteraActivity;
+import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
+import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
+import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -129,10 +139,35 @@ public class InvertebartaActivity extends AppCompatActivity implements Inverteba
 
 
     @Override
-    public void onItemClick(int itemId) {
-        if(itemId == 1){
-            Intent intent = new Intent(InvertebartaActivity.this, CarnivoraActivity.class);
+    public void onItemClick(int itemId, String des) {
+        if(itemId == 49){
+            Intent intent = new Intent(InvertebartaActivity.this, AraneaeActivity.class);
             intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 50) {
+            Intent intent = new Intent(InvertebartaActivity.this, ColeopteraActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 51) {
+            Intent intent = new Intent(InvertebartaActivity.this, LepidopteraActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 52) {
+            Intent intent = new Intent(InvertebartaActivity.this, HymenopteraActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 53) {
+            Intent intent = new Intent(InvertebartaActivity.this, OrthopteraActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
@@ -194,5 +229,6 @@ public class InvertebartaActivity extends AppCompatActivity implements Inverteba
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(InvertebartaActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

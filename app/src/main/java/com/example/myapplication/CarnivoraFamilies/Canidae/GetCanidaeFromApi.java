@@ -24,7 +24,7 @@ public class GetCanidaeFromApi extends AsyncTask<Void, Void, List<Canidae>> {
         List<Canidae> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.119/GetData/get_canidae.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_canidae.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

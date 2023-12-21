@@ -24,7 +24,7 @@ public class GetAuthorFromApi extends AsyncTask<Void, Void, List<Author>> {
         List<Author> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.4/GetData/get_author.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_author.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -45,8 +45,7 @@ public class GetAuthorFromApi extends AsyncTask<Void, Void, List<Author>> {
                     String fullName = data.getString("full_name");
                     String email = data.getString("email");
                     String phone = data.getString("Phone");
-                    String image = data.getString("image");
-                    Author entity = new Author(id, fullName, email, phone, image);
+                    Author entity = new Author(id, fullName, email, phone);
                     result.add(entity);
                 }
             }

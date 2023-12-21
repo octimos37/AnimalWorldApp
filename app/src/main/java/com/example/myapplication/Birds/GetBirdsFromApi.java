@@ -24,7 +24,7 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
         List<Birds> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_birds.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_birds.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 
@@ -46,7 +46,8 @@ public class GetBirdsFromApi extends AsyncTask<Void, Void, List<Birds>> {
                     String nameTV = data.getString("OrdoNameTV");
                     String image_path = data.getString("ImageOrdo");
                     String class_id = data.getString("ClassID");
-                    Birds entity = new Birds(id,  textData, nameTV, image_path, class_id);
+                    String description = data.getString("DescriptionOrdo");
+                    Birds entity = new Birds(id,  textData, nameTV, image_path, class_id, description);
                     result.add(entity);
                 }
             }

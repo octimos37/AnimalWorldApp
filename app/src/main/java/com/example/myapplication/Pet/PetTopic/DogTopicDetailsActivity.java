@@ -18,8 +18,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.Author.AuthorActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeFactFragment;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeVideoFragment;
+import com.example.myapplication.Class.ClassActivity;
+import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -104,6 +107,18 @@ public class DogTopicDetailsActivity extends AppCompatActivity implements Naviga
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(DogTopicDetailsActivity.this, ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_dv){
+            startActivity(new Intent(DogTopicDetailsActivity.this, QuizActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_tg){
+            startActivity(new Intent(DogTopicDetailsActivity.this, AuthorActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
         return false;
     }
     @Override

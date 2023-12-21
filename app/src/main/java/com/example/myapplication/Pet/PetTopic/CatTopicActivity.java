@@ -162,6 +162,13 @@ public class CatTopicActivity extends AppCompatActivity implements CatTopicRecyc
 
     @Override
     public void onItemClick(CatTopic catTopic) {
-        Toast.makeText(this, "Clicked "+catTopic.getTitle(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(CatTopicActivity.this, CatTopicDetailActivity.class);
+
+        intent.putExtra("NamePetDetailTV", catTopic.getTitle());
+        intent.putExtra("ImagePetDetail", catTopic.getImage());
+        intent.putExtra("PetDetailDes", catTopic.getDescription());
+
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 }

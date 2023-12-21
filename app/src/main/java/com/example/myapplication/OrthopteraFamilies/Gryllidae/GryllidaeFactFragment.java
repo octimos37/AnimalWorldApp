@@ -3,11 +3,14 @@ package com.example.myapplication.OrthopteraFamilies.Gryllidae;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.ImageView;
+import android.widget.TextView;
+;
 import com.example.myapplication.R;
 
 /**
@@ -60,7 +63,30 @@ public class GryllidaeFactFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gryllidae_fact, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_gryllidae_fact, container, false);
+
+        ImageView closeImageView = rootView.findViewById(R.id.iv_close);
+        TextView fact = rootView.findViewById(R.id.tv_fact);
+        closeImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Remove the current fragment
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.beginTransaction().remove(GryllidaeFactFragment.this).commit();
+            }
+        });
+
+        Bundle args = getArguments();
+        String data = args.getString("iFact");
+        fact.setText(data);
+        return rootView;
+    }
+
+    public static GryllidaeFactFragment newInstance(String data) {
+        GryllidaeFactFragment fragment = new GryllidaeFactFragment();
+        Bundle args = new Bundle();
+        args.putString("iFact", data);
+        fragment.setArguments(args);
+        return fragment;
     }
 }

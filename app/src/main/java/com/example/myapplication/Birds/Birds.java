@@ -6,13 +6,15 @@ public class Birds {
     private String OrdoNameTV;
     private String ImageOrdo;
     private String ClassID;
+    private String DescriptionOrdo;
 
-    public Birds(String ordoID, String ordoNameE, String ordoNameTV, String imageOrdo, String classID) {
+    public Birds(String ordoID, String ordoNameE, String ordoNameTV, String imageOrdo, String classID, String descriptionOrdo) {
         OrdoID = ordoID;
         OrdoNameE = ordoNameE;
         OrdoNameTV = ordoNameTV;
         ImageOrdo = imageOrdo;
         ClassID = classID;
+        DescriptionOrdo = descriptionOrdo;
     }
 
     public String getOrdoID() {
@@ -53,5 +55,12 @@ public class Birds {
 
     public void setClassID(String classID) {
         ClassID = classID;
+    }
+    public String getDescriptionOrdo() {
+        return DescriptionOrdo;
+    }
+
+    public void setDescriptionOrdo(String descriptionOrdo) {
+        DescriptionOrdo = descriptionOrdo;
     }
 }

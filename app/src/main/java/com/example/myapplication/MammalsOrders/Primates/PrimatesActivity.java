@@ -23,12 +23,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
+import com.example.myapplication.ChiropteraFamilies.Phyllostomidae.PhyllostomidaeActivity;
+import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
 import com.example.myapplication.MammalsOrders.Monotremata.GetMonotremataFromApi;
 import com.example.myapplication.MammalsOrders.Monotremata.LearnMonotremataFragment;
 import com.example.myapplication.MammalsOrders.Monotremata.Monotremata;
 import com.example.myapplication.MammalsOrders.Monotremata.MonotremataActivity;
 import com.example.myapplication.MammalsOrders.Monotremata.MonotremataAdapter;
+import com.example.myapplication.PrimatesFamilies.Cercopithecidae.CercopithecidaeActivity;
+import com.example.myapplication.PrimatesFamilies.Hominidae.HominidaeActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -129,14 +134,20 @@ public class PrimatesActivity extends AppCompatActivity implements PrimatesAdapt
 
     @Override
     public void onItemClick(int itemId, String des) {
-        if(itemId == 1){
-            Intent intent = new Intent(PrimatesActivity.this, CanidaeActivity.class);
+        if(itemId == 40){
+            Intent intent = new Intent(PrimatesActivity.this, HominidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 41){
+            Intent intent = new Intent(PrimatesActivity.this, CercopithecidaeActivity.class);
             intent.putExtra("FamliyID", itemId);
             intent.putExtra("DescriptionFamily", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hiện tại chưa có thông tin", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -194,5 +205,7 @@ public class PrimatesActivity extends AppCompatActivity implements PrimatesAdapt
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(PrimatesActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

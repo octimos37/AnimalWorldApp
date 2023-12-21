@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import com.example.myapplication.Class.ClassActivity;
+
 public class OnboardingActivity extends AppCompatActivity {
 
     Button btnStart;
@@ -21,7 +23,7 @@ public class OnboardingActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnboardingActivity.this, MainActivity.class);
+                Intent intent = new Intent(OnboardingActivity.this, ClassActivity.class);
                 startActivity(intent);
                 finish();
             }

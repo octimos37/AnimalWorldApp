@@ -1,9 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- the root view must be the DrawerLayout -->
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layoutUrsidae"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarnivoraFamilies.Ursidae.UrsidaeActivity">
+    tools:context=".CarnivoraFamilies.Ursidae.UrsidaeActivity"
+    tools:ignore="HardcodedText">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/body"
+        >
+
+        <LinearLayout
+            android:id="@+id/lnly_class"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/searchView"
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/hinh_dau_cham_hoi" />
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Cùng tìm hiểu"
+                android:layout_weight="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                tools:ignore="RtlCompat" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/right_arrow" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="633dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:iconifiedByDefault="true"
+            app:iconifiedByDefault="false"
+            app:layout_constraintTop_toBottomOf="@+id/lnly_class"
+            app:queryHint="Search Animals..." />
+
+        <FrameLayout
+            android:id="@+id/frm_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvProductUrsidae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/body"
+                android:paddingBottom="48dp" />
+        </FrameLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+    <!-- include the menu created in the menu folder -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_viewUrsidae"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/black"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/white"
+        app:menu="@menu/nav_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

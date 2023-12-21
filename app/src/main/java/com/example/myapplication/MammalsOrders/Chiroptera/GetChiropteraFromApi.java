@@ -27,7 +27,7 @@ public class GetChiropteraFromApi extends AsyncTask<Void, Void, List<Chiroptera>
         List<Chiroptera> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_carnivora.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_chiroptera.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

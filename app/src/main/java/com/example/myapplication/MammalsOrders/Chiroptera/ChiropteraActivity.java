@@ -23,12 +23,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.CarnivoraFamilies.Canidae.CanidaeActivity;
+import com.example.myapplication.ChiropteraFamilies.Phyllostomidae.PhyllostomidaeActivity;
+import com.example.myapplication.ChiropteraFamilies.Pteropodidae.PteropodidaeActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.Carnivora;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraAdapter;
 import com.example.myapplication.MammalsOrders.Carnivora.GetCarnivoraFromApi;
 import com.example.myapplication.MammalsOrders.Carnivora.LearnCarnivoraFragment;
+import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -129,14 +133,20 @@ public class ChiropteraActivity extends AppCompatActivity implements ChiropteraA
 
     @Override
     public void onItemClick(int itemId, String des) {
-        if(itemId == 1){
-            Intent intent = new Intent(ChiropteraActivity.this, CanidaeActivity.class);
+        if(itemId == 49){
+            Intent intent = new Intent(ChiropteraActivity.this, PteropodidaeActivity.class);
+            intent.putExtra("FamliyID", itemId);
+            intent.putExtra("DescriptionFamily", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 51){
+            Intent intent = new Intent(ChiropteraActivity.this, PhyllostomidaeActivity.class);
             intent.putExtra("FamliyID", itemId);
             intent.putExtra("DescriptionFamily", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hiện tại chưa có thông tin", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -194,5 +204,6 @@ public class ChiropteraActivity extends AppCompatActivity implements ChiropteraA
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(ChiropteraActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

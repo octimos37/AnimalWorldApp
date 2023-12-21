@@ -39,7 +39,8 @@ public class InvertebartaAdapter extends RecyclerView.Adapter<InvertebartaAdapte
             if (position != RecyclerView.NO_POSITION) {
                 Invertebarta item = data.get(position);
                 String itemId = item.getOrdoID();
-                onItemClickListener.onItemClick(Integer.parseInt(itemId));
+                String des = item.getDescriptionOrdo();
+                onItemClickListener.onItemClick(Integer.parseInt(itemId), des);
             }
         });
 
@@ -65,7 +66,7 @@ public class InvertebartaAdapter extends RecyclerView.Adapter<InvertebartaAdapte
     }
 
     public interface OnItemClickListener {
-        void onItemClick(int itemId);
+        void onItemClick(int itemId, String des);
     }
 
     public void setOnItemClickListener(InvertebartaAdapter.OnItemClickListener listener) {

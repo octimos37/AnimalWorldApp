@@ -53,22 +53,6 @@ public class ClassActivity extends AppCompatActivity implements ClassAdapter.OnI
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
 
-    public static final String url = "https://www.google.com";
-
-    private static final int CLASS_FRAGMENT = 0;
-    private static final int NEW_UPDATE_FRAGMENT = 1;
-    private static final int HOT_SEARCH_FRAGMENT = 2;
-    private static final int FAVORITE_FRAGMENT = 3;
-    private static final int SCIENT_FRAGMENT = 4;
-    private static final int QUIZ_FRAGMENT = 5;
-    private static final int PET_FRAGMENT = 6;
-    private static final int HELP_FRAGMENT = 7;
-    private static final int DIRECTOR_FRAGMENT = 8;
-
-
-    private int mCurrentFragment = CLASS_FRAGMENT;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

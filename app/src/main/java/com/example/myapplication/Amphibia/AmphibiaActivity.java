@@ -23,8 +23,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AmphibiaOrders.Anura.AnuraActivity;
+import com.example.myapplication.AmphibiaOrders.Caudata.CaudataActivity;
+import com.example.myapplication.AmphibiaOrders.Gymnophiona.GymnophionaActivity;
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.Birds.LearnBirdsFragment;
+import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
+import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
+import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
+import com.example.myapplication.MammalsOrders.Insectivora.InsectivoraActivity;
+import com.example.myapplication.MammalsOrders.Monotremata.MonotremataActivity;
+import com.example.myapplication.MammalsOrders.Primates.PrimatesActivity;
+import com.example.myapplication.MammalsOrders.Rodentia.RodentiaActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -129,10 +141,23 @@ public class AmphibiaActivity extends AppCompatActivity implements AmphibiaAdapt
 
 
     @Override
-    public void onItemClick(int itemId) {
-        if(itemId == 1){
-            Intent intent = new Intent(AmphibiaActivity.this, CarnivoraActivity.class);
+    public void onItemClick(int itemId, String des) {
+        if(itemId == 46){
+            Intent intent = new Intent(AmphibiaActivity.this, AnuraActivity.class);
             intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 47) {
+            Intent intent = new Intent(AmphibiaActivity.this, CaudataActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 48) {
+            Intent intent = new Intent(AmphibiaActivity.this, GymnophionaActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
@@ -194,5 +219,6 @@ public class AmphibiaActivity extends AppCompatActivity implements AmphibiaAdapt
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(AmphibiaActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }

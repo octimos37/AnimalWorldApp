@@ -1,4 +1,7 @@
 package com.example.myapplication.LacertiliaFamilies.Agamidae;
 
-public class AgamidaeCallback {
+import java.util.List;
+
+public interface AgamidaeCallback {
+    void onDataReceived(List<Agamidae> data);
 }

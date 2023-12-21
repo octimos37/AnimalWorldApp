@@ -2,13 +2,70 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="385dp"
+    android:background="@color/black"
     tools:context=".GymnophionaFamilies.Ichthyophiidae.IchthyophiidaeFactFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
 
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitEnd"
+                    android:visibility="invisible"
+                    android:src="@drawable/hinh_dau_cham_hoi"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:text="       Bé có biết ?"
+                    android:layout_weight="3"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="2"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_close" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_fact"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/white"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor fringilla feugiat. Sed condimentum convallis fringilla. Pellentesque non faucibus enim, sit amet condimentum velit. Curabitur tellus diam, elementum sed tristique vel, eleifend ac ex. Vivamus ex est, dignissim at accumsan posuere, tincidunt non augue. Praesent tempus tellus lacus, ac eleifend felis posuere suscipit. Phasellus facilisis arcu nec ultricies cursus. Integer pulvinar hendrerit augue, in facilisis odio dapibus ac. Ut interdum dolor ut efficitur ultrices. Nam tempus ex eget nunc tristique faucibus."
+            android:justificationMode="inter_word"
+            />
+    </LinearLayout>
 </FrameLayout>

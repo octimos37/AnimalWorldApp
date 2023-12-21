@@ -24,7 +24,7 @@ public class GetMonotremataFromApi extends AsyncTask<Void, Void, List<Monotremat
         List<Monotremata> result = new ArrayList<>();
 
         try {
-            URL url = new URL("http://192.168.1.131/GetData/get_carnivora.php");
+            URL url = new URL("http://192.168.1.6/GetData/get_monotremata.php");
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setRequestMethod("GET");
 

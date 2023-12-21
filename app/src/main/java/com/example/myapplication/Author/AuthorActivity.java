@@ -12,12 +12,18 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
+import com.example.myapplication.BirdsOrders.Anseriformes.AnseriformesActivity;
+import com.example.myapplication.Class.ClassActivity;
+import com.example.myapplication.Pet.PetActivity;
+import com.example.myapplication.Quiz.QuizActivity;
 import com.example.myapplication.R;
 
 import com.google.android.material.navigation.NavigationView;
@@ -88,6 +94,19 @@ public class AuthorActivity extends AppCompatActivity implements NavigationView.
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.nav_kp){
+            startActivity(new Intent(AuthorActivity.this, ClassActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_cstc){
+            startActivity(new Intent(AuthorActivity.this, PetActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if(id == R.id.nav_dv){
+            startActivity(new Intent(AuthorActivity.this, QuizActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }
+
         return false;
     }
     @Override
@@ -116,5 +135,6 @@ public class AuthorActivity extends AppCompatActivity implements NavigationView.
 
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(AuthorActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);     }
 }

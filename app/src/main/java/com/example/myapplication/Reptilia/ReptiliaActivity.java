@@ -23,9 +23,20 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.myapplication.AnimalClassificationActivity;
 import com.example.myapplication.Invertebrata.LearnInvertebrataFragment;
+import com.example.myapplication.Mammals.MammalsActivity;
+import com.example.myapplication.MammalsOrders.Artiodactyla.ArtiodactylaActivity;
 import com.example.myapplication.MammalsOrders.Carnivora.CarnivoraActivity;
+import com.example.myapplication.MammalsOrders.Cetacea.CetaceaActivity;
+import com.example.myapplication.MammalsOrders.Chiroptera.ChiropteraActivity;
+import com.example.myapplication.MammalsOrders.Primates.PrimatesActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.ReptileOrders.Crocodylia.CrocodyliaActivity;
+import com.example.myapplication.ReptileOrders.Lacertilia.LacertiliaActivity;
+import com.example.myapplication.ReptileOrders.Rhynchocephalia.RhynchocephaliaActivity;
+import com.example.myapplication.ReptileOrders.Serpentes.SerpentesActivity;
+import com.example.myapplication.ReptileOrders.Testudines.TestudinesActivity;
 import com.example.myapplication.fragment.ClassFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.r0adkll.slidr.Slidr;
@@ -128,14 +139,39 @@ public class ReptiliaActivity extends AppCompatActivity implements ReptiliaAdapt
 
 
     @Override
-    public void onItemClick(int itemId) {
-        if(itemId == 1){
-            Intent intent = new Intent(ReptiliaActivity.this, CarnivoraActivity.class);
+    public void onItemClick(int itemId, String des) {
+        if(itemId == 34){
+            Intent intent = new Intent(ReptiliaActivity.this, SerpentesActivity.class);
             intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 35) {
+            Intent intent = new Intent(ReptiliaActivity.this, TestudinesActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 36) {
+            Intent intent = new Intent(ReptiliaActivity.this, CrocodyliaActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        } else if (itemId == 37) {
+            Intent intent = new Intent(ReptiliaActivity.this, RhynchocephaliaActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        }else if (itemId == 38) {
+            Intent intent = new Intent(ReptiliaActivity.this, LacertiliaActivity.class);
+            intent.putExtra("OrdoID", itemId);
+            intent.putExtra("DescriptionOrdo", des);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }else{
-            Toast.makeText(this, "Clicked item ID: " + itemId, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hiện tại chưa có thông tin", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
@@ -193,5 +229,6 @@ public class ReptiliaActivity extends AppCompatActivity implements ReptiliaAdapt
         animator.start();
     }
     public void CameraClick(MenuItem item){
-        Toast.makeText(this, "Clicked camera!", Toast.LENGTH_SHORT).show();    }
+        Intent intent = new Intent(ReptiliaActivity.this, AnimalClassificationActivity.class);
+        startActivity(intent);    }
 }
